@@ -1,0 +1,156 @@
+
+	<section id="page-banner">
+		<div class="single-page-title-area overlay bg" data-background="assets/img/bg/slide1.jpg">
+			<div class="auto-container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="single-page-title">
+							<h2 >Get In Touch</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="single-page-title-area-bottom">
+			<div class="auto-container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+							<li class="breadcrumb-item active">Contact Us</li>
+						</ol>
+					</div>
+				</div>
+				<!-- end row-->
+			</div>
+		</div>
+	</section>
+	<!-- END PAGE BANNER AND BREADCRUMBS -->
+	
+	<!-- START CONTACT SECTION -->
+    <section id="contactpage" class="section-padding">
+        <div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="section-title">
+						<h5>response with in minute</h5>
+						<h3>Contact <span>Alliance Investment Management Ltd</span></h3>
+					</div>
+				</div>
+			</div>
+			<!-- end section title -->
+			<div class="row text-center">
+				<div class="col-lg-3 col-md-3 col-12 mb-lg-0 mb-md-0 mb-5">
+					<div class="single-address">
+						<div class="single-address-icon">
+							<i class="far fa-envelope-open"></i>
+						</div>
+						<div class="single-address-dec">
+							<h4>Write a mail</h4>
+							<p>Email:<br>allianceinvestmentmanagement<br>@gmail.com </p>
+
+						</div>
+						<div class="single-address-link">
+							<a href="#">quick Send</a>
+						</div>
+					</div>
+				</div>
+				<!-- end col -->
+				<div class="col-lg-3 col-md-3 col-12 mb-lg-0 mb-md-0 mb-5">
+					<div class="single-address">
+						<div class="single-address-icon">
+							<i class="icofont icofont-phone-circle"></i>
+						</div>
+						<div class="single-address-dec">
+							<h4>Give a call</h4>
+							<p>Phone: +447520627388 </p>
+							<p>Phone: +447520627388 </p>
+						</div>
+						<div class="single-address-link">
+							<a href="#">quick call</a>
+						</div>
+					</div>
+				</div>
+				<!-- end col -->
+				<div class="col-lg-3 col-md-3 col-12 mb-lg-0 mb-md-0 mb-5">
+					<div class="single-address">
+						<div class="single-address-icon">
+							<i class="far fa-address-card"></i>
+						</div>
+						<div class="single-address-dec">
+							<h4>Visit our location</h4>
+							<p>Address: Booth St W, Manchester M15 6PB, United Kingdom </p>
+						</div>
+						<div class="single-address-link">
+							<a href="#">find Direction</a>
+						</div>
+					</div>
+				</div>
+				<!-- end col -->
+				<div class="col-lg-3 col-md-3 col-12 mb-lg-0 mb-md-0 mb-5">
+					<div class="single-address">
+						<div class="single-address-icon">
+							<i class="fab fa-rocketchat"></i>
+						</div>
+						<div class="single-address-dec">
+							<h4>Lets's have a chat</h4>
+							<p>Telephone: +447520627388</p>
+							<p>Fax: 321-654-0975</p>
+						</div>
+						<div class="single-address-link">
+							<a href="#">click here</a>
+						</div>
+					</div>
+				</div>
+				<!-- end col -->
+			</div>
+			<!-- end row -->
+
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="section-title-2">
+						<h3>Send Us Message</h3>
+					</div>
+				</div>
+				<div class="col-lg-7 mx-auto">
+					<div class="contact-form-wrapper">
+						<div class="contact-form">
+							<form [formGroup]="contactForm" return false >
+								<div class="row">
+									<div class="form-group col-12 mb-3">
+										<label>Full Name:</label>
+										<input formControlName="name" class="form-control"  required="required" type="text">
+									</div>
+									<div class="form-group col-12 mb-3">
+										<label>Your Email:</label>
+										<input formControlName="email" class="form-control"  required="required" type="email">
+									</div>
+									<div class="form-group col-12 mb-3">
+										<label>Phone Number:</label>
+										<input formControlName="phone_number" class="form-control"  required="required" type="text">
+									</div>
+									<div class="form-group col-12 mb-3">
+										<label>Subject:</label>
+										<input formControlName="subject" class="form-control"  required="required" type="text">
+									</div>
+									<div class="form-group col-12 mb-3">
+										<label>Message:</label>
+										<textarea rows="6" formControlName="message" class="form-control"  placeholder="Your Message Here..." required="required"></textarea>
+									</div>
+									<div class="form-group col-lg-12 mb-0 text-center">
+										<div class="actions">
+											
+											<button class="btn btn-contact-bg" (click)="message(contactForm.value)"  type="submit">Message Us.</button></div>
+									</div>
+								</div>
+							</form>								
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end row -->
+        </div>
+        <!--- END CONTAINER -->
+    </section>
+    <!-- END CONTACT SECTION -->
+	
