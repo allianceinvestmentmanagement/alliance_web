@@ -64,14 +64,14 @@
                     <div class="col-lg-9 d-none d-lg-block d-md-none">
                         <nav class="navbar navbar-expand-lg justify-content-left">
                             <ul class="navbar-nav">
-                               <P class="dropdown"><a href="index-2.html" class="nav-link">Dashboard</a>
+                               <P class="dropdown"><a [routerLink]="['/user']" routerLinkActive="active" class="nav-link">Dashboard</a>
                         
                                 </P>
                                 <li class="dropdown"><a class="nav-link" href="#">Investment</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="about.html">New Investment</a></li>
-                                        <li><a href="team.html">Investment Histroy</a></li>
-                                        <li><a href="single-team.html">Recent Investment</a></li>
+                                        <li><a href>New Investment</a></li>
+                                        <li><a href>Investment Histroy</a></li>
+                                        <li><a href>Recent Investment</a></li>
                                         
                                     </ul>
                                 </li>
@@ -86,8 +86,8 @@
                                 </li>
                                 <li class="dropdown"><a href="service.html" class="nav-link">MY PROFILE</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="                  ">Edit Profile</a></li>
-                                        <li><a href="single-service.html">Change Password</a></li>
+                                        <li><a [routerLink]="['/user/profile']" routerLinkActive="active">Edit Profile</a></li>
+                                        <li><a [routerLink]="['/user/password_change']" routerLinkActive="active">Change Password</a></li>
                                         <li><a href (click)="logout()">Logout</a></li>
                                         
                                     </ul>
@@ -95,7 +95,7 @@
                             
 
                             
-                                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                                <li><a href class="nav-link">Contact</a></li>
                                 <li style="float: right !important;"><a class="nav-link" >Welcome {{userdetail?.name}}</a></li>
                             </ul>
                         </nav>
