@@ -133,13 +133,13 @@
 						<h6>15yZCjbre5i3PFJgk81dWqkPEL9hBPoidr</h6>			   
 					</div>
 					<br>
-					<form class="checkout-form row">
+					<form  [formGroup]="walletForm" return false class="checkout-form row">
 						<div class="form-group col-12">
 							<label for="">Amount in USD</label>
-							<input class="form-control" type="number" placeholder="Amount in Usd">	
+							<input formControlName="deposited_amount"  class="form-control" type="number" placeholder="Amount in Usd">	
 						</div>	
 						<div class="form-group col-12">
-							<select name="cars"   class="form-control" >
+							<select name="cars" formControlName="depositor_source"   class="form-control" >
 								<optgroup label="Payment Method">
 									<option value="btc">BTC</option>
 								</optgroup>
@@ -147,15 +147,15 @@
 						</div>	
 						<div class="form-group col-12">
 							<label for="">Upload Deposit Proof</label>
-							<input type="file" multiple required  class="form-control"> 
+							<input type="file" formControlName="deposited_proof" (change)="handleFileUpload($event)" multiple required  class="form-control"> 
 						</div>
 					    <div class="form-group col-12">
-							<input type="text" name="city" placeholder=Message class="form-control" style="height: 100px;">
+							<input type="text" formControlName="depositor_message" name="city" placeholder=Message class="form-control" style="height: 100px;">
 					    </div>	
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button type="button" (click)="submit(walletForm.value)" class="btn btn-primary">Save changes</button>
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 				</div>
