@@ -2,7 +2,8 @@
     <!-- START TOP AREA -->
     <div class="top-area">
         <div class="auto-container">
-            <div class="row">
+
+            <div class="row" *ngIf="isEmpty">
                 <div class="col-lg-8 col-md-12 col-sm-12 col-12">
                     <div class="info-menu">
                         <ul>
@@ -25,6 +26,7 @@
                 </div>
                 <!-- end col -->
             </div>
+
         </div>
     </div>
     <!-- END TOP AREA -->
@@ -35,7 +37,7 @@
             <div class="row">
                 <div class="col-lg-5 col-md-3 col-sm-6 col-7 mx-auto pl-0 mb-lg-0 mb-5">
                     <div class="logo">
-                        <a href="#">
+                        <a [routerLink]="['/']">
                             <img class="img-fluid" src="../../../assets/img/images/aliance.JPG" alt="">
                         </a>
                     </div>
@@ -55,6 +57,7 @@
                     </div>
                     <div class="header-info-box">
                         <a  [routerLink]="['/pricing']" class="quote-btn">Invest Now <i class="icofont icofont-caret-right"></i></a>
+                        <!-- <a *ngIf="userdetail?.name != 'null'"  [routerLink]="['/user']" class="quote-btn" style="margin: 5px;">Go To Dashboard <i class="icofont icofont-caret-right"></i></a> -->
                     </div>
                 </div>
                 <!-- end col -->

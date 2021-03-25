@@ -165,7 +165,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 				  <div class="modal-header">
-					<h5 class="modal-title orange_color">Modal title</h5>
+					<h5 class="modal-title orange_color">Pay Using Bitcash</h5>
 					<button type="button" class="close orange_color" data-dismiss="modal" aria-label="Close">
 					  <span aria-hidden="true">&times;</span>
 					</button>
@@ -174,29 +174,33 @@
 					<div class="col-12">
 						<h6>SENDING DETAILS</h6>
 						<h6>Send Amount:</h6><br> 
-						<h6>TO</h6><br>
-						<h6>15yZCjbre5i3PFJgk81dWqkPEL9hBPoidr</h6>			   
+						<h6>TO Bitcoin Cash Address:</h6><br>
+						<h6>qqmf9tv6dfcjt8xp4dq252eg3yutlp8ehurlq5t9zr</h6>			   
 					</div>
 					<br>
-					<form class="checkout-form row">
+					<form  [formGroup]="walletForm" return false class="checkout-form row">
 						<div class="form-group col-12">
-							<select name="cars"   class="form-control" >
+							<label for="">Amount in USD</label>
+							<input formControlName="deposited_amount"  class="form-control" type="number" placeholder="Amount in Usd">	
+						</div>
+						<div class="form-group col-12">
+							<select name="cars"   class="form-control" formControlName="depositor_source">
 								<optgroup label="Payment Method">
-									<option value="btc">BTC</option>
+									<option value="bitcoin_cash">Bitcoin Cash</option>
 								</optgroup>
 							  </select>
 						</div>	
 						<div class="form-group col-12">
 							<label for="">Upload Deposit Proof</label>
-							<input type="file" multiple required  class="form-control"> 
+							<input type="file" formControlName="deposited_proof" (change)="handleFileUpload($event)" multiple required class="form-control"> 
 						</div>
 					    <div class="form-group col-12">
-							<input type="text" name="city" placeholder=Message class="form-control" style="height: 100px;">
+							<input type="text" name="city" formControlName="depositor_message" placeholder=Message class="form-control" style="height: 100px;">
 					    </div>	
 					</form>
 				</div>
 				  <div class="modal-footer">
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button type="button" class="btn btn-primary" (click)="submit(walletForm.value)">Save changes</button>
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				  </div>
 				</div>
@@ -206,16 +210,42 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 				  <div class="modal-header">
-					<h5 class="modal-title orange_color">Modal title</h5>
+					<h5 class="modal-title orange_color">Using Perfect Money</h5>
 					<button type="button" class="close orange_color" data-dismiss="modal" aria-label="Close">
 					  <span aria-hidden="true">&times;</span>
 					</button>
 				  </div>
-				  <div class="modal-body">
-					<p>Modal body text goes here.</p>
-				  </div>
+				  <div class="modal-body">	
+					<div class="col-12">
+						<h6>SENDING DETAILS</h6>
+						<h6>Send Amount:</h6><br> 
+						<h6>TO Perfectmoney account:</h6><br>
+						<h6>U28219496</h6>			   
+					</div>
+					<br>
+					<form   [formGroup]="walletForm" return false class="checkout-form row">
+						<div class="form-group col-12">
+							<label for="">Amount in USD</label>
+							<input formControlName="deposited_amount"  class="form-control" type="number" placeholder="Amount in Usd">	
+						</div>
+						<div class="form-group col-12">
+							<select name="cars" formControlName="depositor_source"   class="form-control" >
+								<optgroup label="Payment Method">
+									<option value="perfect_money">Perfect Money</option>
+								</optgroup>
+							  </select>
+						</div>	
+						<div class="form-group col-12">
+							<label for="">Upload Deposit Proof</label>
+							<input type="file" formControlName="deposited_proof" (change)="handleFileUpload($event)" multiple required  class="form-control"> 
+						</div>
+					    <div class="form-group col-12">
+							<input type="text" formControlName="depositor_message" name="city" placeholder=Message class="form-control" style="height: 100px;">
+					    </div>	
+					</form>
+				</div>
 				  <div class="modal-footer">
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button type="button" class="btn btn-primary" (click)="submit(walletForm.value)">Save changes</button>
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				  </div>
 				</div>
@@ -225,16 +255,43 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 				  <div class="modal-header">
-					<h5 class="modal-title orange_color">Modal title</h5>
+					<h5 class="modal-title orange_color">Pay Using Payeer</h5>
 					<button type="button" class="close orange_color" data-dismiss="modal" aria-label="Close">
 					  <span aria-hidden="true">&times;</span>
 					</button>
 				  </div>
-				  <div class="modal-body">
-					<p>Modal body text goes here.</p>
-				  </div>
+				  <div class="modal-body">	
+					<div class="col-12">
+						<h6>SENDING DETAILS</h6>
+						<h6>Send Amount:</h6><br> 
+						<h6>TO Perfectmoney account:</h6><br>
+						<h6>U28219496</h6>			   
+					</div>
+					<br>
+					<form  [formGroup]="walletForm" return false class="checkout-form row">
+
+						<div class="form-group col-12">
+							<label for="">Amount in USD</label>
+							<input formControlName="deposited_amount"  class="form-control" type="number" placeholder="Amount in Usd">	
+						</div>
+						<div class="form-group col-12">
+							<select name="cars" formControlName="depositor_source"   class="form-control" >
+								<optgroup label="Payment Method">
+									<option value="payeer">Payeer Money</option>
+								</optgroup>
+							  </select>
+						</div>	
+						<div class="form-group col-12">
+							<label for="">Upload Deposit Proof</label>
+							<input type="file" formControlName="deposited_proof" (change)="handleFileUpload($event)" multiple required  class="form-control"> 
+						</div>
+					    <div class="form-group col-12">
+							<input type="text" name="city" formControlName="depositor_message" placeholder=Message class="form-control" style="height: 100px;">
+					    </div>	
+					</form>
+				</div>
 				  <div class="modal-footer">
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button type="button" class="btn btn-primary" (click)="submit(walletForm.value)">Save changes</button>
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				  </div>
 				</div>
@@ -244,16 +301,42 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 				  <div class="modal-header">
-					<h5 class="modal-title orange_color">Modal title</h5>
+					<h5 class="modal-title orange_color">Pay Using Ethereum</h5>
 					<button type="button" class="close orange_color" data-dismiss="modal" aria-label="Close">
 					  <span aria-hidden="true">&times;</span>
 					</button>
 				  </div>
-				  <div class="modal-body">
-					<p>Modal body text goes here.</p>
-				  </div>
+				  <div class="modal-body">	
+					<div class="col-12">
+						<h6>SENDING DETAILS</h6>
+						<h6>Send Amount:</h6><br> 
+						<h6>TO Ethereum:</h6><br>
+						<h6>0x93F05e75E224d1cE6cc122eCbCF43065d8B287fF</h6>			   
+					</div>
+					<br>
+					<form  [formGroup]="walletForm" return false class="checkout-form row">
+						<div class="form-group col-12">
+							<label for="">Amount in USD</label>
+							<input formControlName="deposited_amount"  class="form-control" type="number" placeholder="Amount in Usd">	
+						</div>
+						<div class="form-group col-12">
+							<select name="cars"  formControlName="depositor_source" class="form-control" >
+								<optgroup label="Payment Method">
+									<option value="ethereum">Ethereum</option>
+								</optgroup>
+							  </select>
+						</div>	
+						<div class="form-group col-12">
+							<label for="">Upload Deposit Proof</label>
+							<input type="file" formControlName="deposited_proof" (change)="handleFileUpload($event)" multiple required  class="form-control"> 
+						</div>
+					    <div class="form-group col-12">
+							<input type="text" name="city" formControlName="depositor_message" placeholder=Message class="form-control" style="height: 100px;">
+					    </div>	
+					</form>
+				</div>
 				  <div class="modal-footer">
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button type="button" class="btn btn-primary" (click)="submit(walletForm.value)">Save changes</button>
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				  </div>
 				</div>

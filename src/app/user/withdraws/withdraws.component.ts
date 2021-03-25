@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/core/data/user.service';
 
 @Component({
   selector: 'app-withdraws',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WithdrawsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _userService: UserService) { }
 
   ngOnInit(): void {
+    this._userService.getwithdrawHistory().subscribe((data: any) => {
+      console.log(data);
+    }, err => {
+      console.log(err);
+    })
   }
 
 }
