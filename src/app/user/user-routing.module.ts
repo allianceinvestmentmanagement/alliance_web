@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { InvestmentsComponent } from './investments/investments.component';
+import { NewInvestComponent } from './new-invest/new-invest.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { UserComponent } from './user.component';
 import { WalletComponent } from './wallet/wallet.component';
@@ -36,6 +38,14 @@ const routes: Routes = [
       {
         path: 'transactions',
         component: TransactionsComponent
+      },
+      {
+        path: 'new-invest',
+        component: NewInvestComponent
+      },
+      {
+        path: 'invest-history',
+        component: InvestmentsComponent
       },
     ]
   }

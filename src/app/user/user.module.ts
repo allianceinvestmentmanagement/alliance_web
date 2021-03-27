@@ -12,10 +12,12 @@ import { WalletsComponent } from './wallets/wallets.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { WithdrawsComponent } from './withdraws/withdraws.component';
 import { TransactionsComponent } from './transactions/transactions.component';
+import { NewInvestComponent } from './new-invest/new-invest.component';
+import { InvestmentsComponent } from './investments/investments.component';
 
 
 @NgModule({
-  declarations: [UserComponent, DashboardComponent, WalletComponent, WalletsComponent, WithdrawComponent, WithdrawsComponent, TransactionsComponent],
+  declarations: [UserComponent, DashboardComponent, WalletComponent, WalletsComponent, WithdrawComponent, WithdrawsComponent, TransactionsComponent, NewInvestComponent, InvestmentsComponent],
   imports: [
     CommonModule,
     UserRoutingModule,

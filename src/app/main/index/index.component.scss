@@ -1,17 +1,22 @@
 .slider-1{
-    background-image: url('../../../assets/img/bg/slide1.jpg') !important;
+    background-image: url('../../../assets/img/bg/slide1.jpg') ;
 }
 .slider-2{
-    background-image: url('../../../assets/img/bg/slide5.jpg') !important;
+    background-image: url('../../../assets/img/bg/slide5.jpg') ;
 }
 .slider-3{
-    background-image: url('../../../assets/img/bg/slide6.jpg') !important;
+    background-image: url('../../../assets/img/bg/slide6.jpg') ;
 }
 
 .counter {
-    background-image: url('../../../assets/img/bg/counterbg.jpg') !important;
+    background-image: url('../../../assets/img/bg/counterbg.jpg') ;
 }
 
 .chain{
-    background-image: url('../../../assets/img/bg/processbg.jpg') !important;
+    background-image: url('../../../assets/img/bg/processbg.jpg') ;
+}
+
+.send{
+    cursor: pointer;
+    color: #fff !important;
 }

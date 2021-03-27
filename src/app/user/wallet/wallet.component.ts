@@ -67,12 +67,13 @@ export class WalletComponent implements OnInit {
       for (var i = 0; i < this.deposited_proof.length; i++) {  
         myFormData.append('deposited_proof', this.deposited_proof[i]['path']);
       } 
-      this.http.post('https://allianceapi.herokuapp.com/api/v1/user/deposit', myFormData , httpOptions )
-      .subscribe(data => {
-        console.log(data);
-      }, err => {
-       console.log(err);
-      })
+      console.log(data);
+      // this.http.post('https://allianceapi.herokuapp.com/api/v1/user/deposit', myFormData , httpOptions )
+      // .subscribe(data => {
+      //   console.log(data);
+      // }, err => {
+      //  console.log(err);
+      // })
   }
   pay_btc_modal() {
     console.log('I want to pay with this platform.');

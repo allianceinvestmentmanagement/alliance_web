@@ -7,12 +7,14 @@ import { UserService } from 'src/app/core/data/user.service';
   styleUrls: ['./withdraws.component.scss']
 })
 export class WithdrawsComponent implements OnInit {
+  withdraws: any;
 
   constructor(private _userService: UserService) { }
 
   ngOnInit(): void {
     this._userService.getwithdrawHistory().subscribe((data: any) => {
-      console.log(data);
+     this.withdraws = data['data']; 
+     console.log(this.withdraws);
     }, err => {
       console.log(err);
     })
