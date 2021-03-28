@@ -44,17 +44,17 @@
                         <div class="stepwizard-row">
                             <div class="stepwizard-step">
                                 <button type="button" class="active btn btn-circle"><i class="fab fa-wpforms"></i></button>
-                                <h6><a href="contact.html">Wallet Ballance</a></h6>
+                                <h6><a >Wallet Ballance</a></h6>
                                 
                             </div>
                             <div class="stepwizard-step">
                                 <button type="button" class="btn btn-circle"><i class="fa fa-list-alt"></i></button>
-                                <h6><a href="contact.html">Credit Wallet</a></h6>
+                                <h6><a >Credit Wallet</a></h6>
                             
                             </div>
                             <div class="stepwizard-step">
                                 <button type="button" class="btn btn-circle" disabled="disabled"><i class="fab fa-opencart"></i></button>
-                                <h6><a href="contact.html">Total Transaction</a></h6>
+                                <h6><a >Total Transaction</a></h6>
                                 
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                                 <div class="single-buy-box-dec">
                                     <h2>$</h2>
                                 
-                                    <a href="#" class="btn-style btn-filled btn-filled-2 mb-5">Check Now</a>
+                                    <a [routerLink]="['/user']" class="btn-style btn-filled btn-filled-2 mb-5">Check Now</a>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                                 <div class="single-buy-box-dec">
                                     <h2>${{totaldeposit}}</h2>
                                 
-                                    <a href="#" class="btn-style btn-filled btn-filled-2 mb-5">Check Now</a>
+                                    <a [routerLink]="['/user']" class="btn-style btn-filled btn-filled-2 mb-5">Check Now</a>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                                 <div class="single-buy-box-dec">
                                     <h2>$ {{totalwithdraw}}</h2>
                                     
-                                    <a href="#" class="btn-style btn-filled btn-filled-2 mb-5">Check Now</a>
+                                    <a [routerLink]="['/user']" class="btn-style btn-filled btn-filled-2 mb-5">Check Now</a>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                                 <div class="single-buy-box-dec">
                                     <h2>€2360</h2>
                                     <p>*You can Save 20%</p>
-                                    <a href="#" class="btn-style btn-filled btn-filled-2 mb-5">Buy Now</a>
+                                    <a [routerLink]="['/user']" class="btn-style btn-filled btn-filled-2 mb-5">Buy Now</a>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                     <h4 class="text-uppercase">Want to knowe more?</h4>
                     
                 </div>
-                <a href="contact.html" class=" wow fadeInDown btn-style btn-border btn-border-3">Contact Us <i class="icofont icofont-hand-right"></i></a>
+                <a [routerLink]="['/contact']"  class=" wow fadeInDown btn-style btn-border btn-border-3">Contact Us <i class="icofont icofont-hand-right"></i></a>
             </div>
             <!-- end col -->
             <!-- end col -->
