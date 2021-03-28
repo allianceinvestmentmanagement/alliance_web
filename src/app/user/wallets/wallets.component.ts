@@ -13,13 +13,7 @@ export class WalletsComponent implements OnInit {
   constructor(private _userService: UserService) { }
 
   ngOnInit(): void {
-    // const getAllWalletHistory$ = this._userService.getwalletHistory();
-    // getAllWalletHistory$.subscribe((res: any) => {
-    //     this.walletHistory = res.data;
-    //     console.log(this.walletHistory);
-    // }, error => {
-    //   console.log(error);
-    // })
+
     this.getHistory();
   }
   getHistory() {

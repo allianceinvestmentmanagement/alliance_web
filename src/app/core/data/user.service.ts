@@ -50,4 +50,24 @@ export class UserService {
       })
     });
   }
+  // Function to get the total withdraw
+    getTotalWithdraw() {
+      return this._http.get(`${url}/user/total_withdraw`,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
+  // Function to get total ddeposit
+  getTotalDeposit() {
+      return this._http.get(`${url}/user/total_deposit`,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+  }
 }

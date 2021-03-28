@@ -33,7 +33,8 @@ successMessage: any;
   constructor(private _userService: UserService,
     public formBuilder: FormBuilder,
     private _router: Router,
-    private _authService: AuthService,) { }
+    private _authService: AuthService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -42,8 +43,10 @@ successMessage: any;
   submit(data: any)  {
     this._userService.requestWithdraw(this.withdrawForm.value).subscribe((data: any) => {
       this.withdrawForm.reset();
+      console.log(data);
       this._router.navigate(['/user/withdraws']);
     }, err => {
+      console.log(err);
        console.log(err);
     })
   }
