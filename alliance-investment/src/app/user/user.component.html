@@ -1,25 +1,18 @@
-<!-- START HEADER SECTION -->
-<header class="main-header header-1">
-    <!-- START TOP AREA -->
+<!-- <header class="main-header header-1">
     <div class="top-area">
         <div class="auto-container">
             <div class="row">
                 <div class="col-lg-8 col-md-12 col-sm-12 col-12">
                     
                 </div>
-                <!-- end col -->
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                     <div class="info-menu">
                         
                     </div>
                 </div> 
-                <!-- end col -->
             </div>
         </div>
     </div>
-    <!-- END TOP AREA -->
-
-    <!-- START LOGO AREA -->
     <div class="logo-area">
         <div class="auto-container">
             <div class="row">
@@ -30,7 +23,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- end col -->
                 <div class="col-lg-7 col-md-12 col-sm-12 col-12">
                     <div class="header-info-box">
                      
@@ -46,13 +38,9 @@
                         <a href [routerLink]="['/']" class="quote-btn">Home <i class="icofont icofont-caret-right"></i></a>
                     </div>
                 </div>
-                <!-- end col -->
             </div>
         </div>
     </div>
-    <!-- END LOGO AREA -->
-
-    <!-- START NAVIGATION AREA -->
     <div class="sticky-menu">
         <div class="mainmenu-area">
             <div class="auto-container">
@@ -76,13 +64,13 @@
                                         <li><a [routerLink]="['/user/withdraws']" routerLinkActive="active">Withdraw Histroy</a></li>
                                         <li><a [routerLink]="['/user/wallet']" routerLinkActive="active">Desposit Fund</a></li>
                                         <li><a [routerLink]="['/user/wallets']" routerLinkActive="active">Deposit Histroy</a></li>
-                                        <!-- <li><a [routerLink]="['/user/transactions']" routerLinkActive="active">Transaction Log</a></li> -->
+                                        <li><a [routerLink]="['/user/transactions']" routerLinkActive="active">Transaction Log</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown"><a href="service.html" class="nav-link">MY PROFILE</a>
                                     <ul class="dropdown-menu">
-                                        <!-- <li><a [routerLink]="['/user/profile']" routerLinkActive="active">Edit Profile</a></li> -->
-                                        <!-- <li><a [routerLink]="['/user/password_change']" routerLinkActive="active">Change Password</a></li> -->
+                                        <li><a [routerLink]="['/user/profile']" routerLinkActive="active">Edit Profile</a></li>
+                                        <li><a [routerLink]="['/user/password_change']" routerLinkActive="active">Change Password</a></li>
                                         <li><a href (click)="logout()">Logout</a></li>
                                         
                                     </ul>
@@ -99,8 +87,35 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- END NAVIGATION AREA -->	
-</header>
-<!-- END HEADER SECTION -->
+    </div>	
+</header> -->
+<!-- New Navbar start -->
+<nav>
+    <ul>
+        <button>🞬</button>
+        <li style="margin-left: 50px;">
+            <img src="../../assets/img/images/aliance_1.JPG" alt="alliance logo"   srcset="">
+        </li>
+          <li  > 
+                <a [routerLink]="['/user']" routerLinkActive="active" >Dashboard</a>
+          </li>
+          <li><a [routerLink]="['/user/withdraw']" routerLinkActive="active">Withdraw-Fund</a></li>
+          <li><a [routerLink]="['/user/withdraws']" routerLinkActive="active">Withdraw-Histroy</a></li>
+          <li><a [routerLink]="['/user/wallet']" routerLinkActive="active">Desposit-Fund</a></li>
+          <li><a [routerLink]="['/user/wallets']" routerLinkActive="active">Deposit-Histroy</a></li>
+          <!-- <li><a [routerLink]="['/user/transactions']" routerLinkActive="active">Transaction Log</a></li> -->
+    
+          <li><a [routerLink]="['/user/withdraw']" routerLinkActive="active">Withdraw Fund</a></li>
+          <li><a [routerLink]="['/user/withdraws']" routerLinkActive="active">Withdraw Histroy</a></li>
+          <li><a [routerLink]="['/user/wallet']" routerLinkActive="active">Desposit Fund</a></li>
+          <li><a [routerLink]="['/user/wallets']" routerLinkActive="active">Deposit Histroy</a></li>
+          <!-- <li><a [routerLink]="['/user/transactions']" routerLinkActive="active">Transaction Log</a></li> -->
+        <!-- <li>
+            <a [routerLink]="['/login']" routerLinkActive="active"> Login </a>
+        </li>
+        <li>
+            <a  [routerLink]="['/register']" routerLinkActive="active"> Register </a>
+        </li> -->
+    </ul>
+</nav>
 <router-outlet></router-outlet>

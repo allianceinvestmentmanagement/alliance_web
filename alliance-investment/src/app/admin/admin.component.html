@@ -1,0 +1,29 @@
+<nav>
+    <ul>
+        <button>🞬</button>
+        <li style="margin-left: 50px;">
+            <img src="../../assets/img/images/aliance_1.JPG" alt="" height="50px"  srcset="">
+        </li>
+        <li> 
+            <a [routerLink]="['/panel/admin']" routerLinkActive="active">Dashboard </a>
+          </li>
+      <li> 
+        <a [routerLink]="['/panel/admin/users']" routerLinkActive="active"> Manage User </a>
+      </li>
+      <li>
+         <a [routerLink]="['/panel/admin/deposits']" routerLinkActive="active"> Manage Deposit </a>
+      </li>
+      <li>
+        <a [routerLink]="['/panel/admin/withdraws']" routerLinkActive="active"> Manage Withdraws</a>
+      </li>
+      <li>
+        <a [routerLink]="['/panel/admin/messages']" routerLinkActive="active"> Messages </a>
+      </li>
+      <li>
+        <a class="logout"> Logout </a>
+      </li>
+    </ul>
+  </nav>
+<div>
+    <router-outlet></router-outlet>
+</div>

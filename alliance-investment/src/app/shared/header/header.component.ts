@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../core/data/auth.service';
-
+declare var $: any;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -23,6 +23,17 @@ export class HeaderComponent implements OnInit {
 
       }
       })
+      $(document).ready(function(){
+        $("button").click(function(){
+          if($("button").text() == "☰"){
+          $("button").text("🞬");
+          }else{
+          $("button").text("☰");
+          }
+          
+          $("li").toggle("slow");
+        });  
+		});
   }
   
 }

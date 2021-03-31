@@ -44,7 +44,13 @@ export class LoginComponent implements OnInit {
 loginUser = async (form: authModel) => {
   await  this._authService.login(form).subscribe(res => {
         this._authService.setToken(res['token']); 
-        this._router.navigate(['/user']);
+        if(res['role'] === 'user') {
+          this._router.navigate(['/user']);
+        } else if (res['role'] === 'admin') {
+          this._router.navigate(['/panel/admin']);
+      }  else {
+        this._router.navigate(['/login']);
+      }  
       },
       (err) => {
         console.log(err);
