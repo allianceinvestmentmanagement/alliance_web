@@ -306,6 +306,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: '', loadChildren: () => Promise.all(/*! import() | main-main-module */[__webpack_require__.e("default~main-main-module~user-user-module"), __webpack_require__.e("main-main-module")]).then(__webpack_require__.bind(null, /*! ./main/main.module */ "XpXM")).then(m => m.MainModule) },
     { path: 'user', canActivate: [_core_guard_guard_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]], loadChildren: () => Promise.all(/*! import() | user-user-module */[__webpack_require__.e("default~main-main-module~user-user-module"), __webpack_require__.e("user-user-module")]).then(__webpack_require__.bind(null, /*! ./user/user.module */ "7UCR")).then(m => m.UserModule) },
+    { path: 'panel/admin', canActivate: [_core_guard_guard_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]], loadChildren: () => __webpack_require__.e(/*! import() | admin-admin-module */ "admin-admin-module").then(__webpack_require__.bind(null, /*! ./admin/admin.module */ "jkDv")).then(m => m.AdminModule) },
 ];
 class AppRoutingModule {
 }
