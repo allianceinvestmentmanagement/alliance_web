@@ -11,9 +11,8 @@ import { authModel } from 'src/app/core/models/model';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup = this.formBuilder.group({
-    email: new FormControl('', Validators.compose([
-      Validators.required,
-      Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+    username: new FormControl('', Validators.compose([
+      Validators.required
     ])),
     password: new FormControl('', Validators.compose([
       Validators.minLength(5),
