@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../core/data/auth.service';
-
+declare var $: any;
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -16,6 +16,17 @@ export class UserComponent implements OnInit {
     this._authService.getUserInfo().subscribe((data: any) => {
       this.userdetail = data['user'];
     })
+    $(document).ready(function(){
+      $("button").click(function(){
+        if($("button").text() == "☰"){
+        $("button").text("🞬");
+        }else{
+        $("button").text("☰");
+        }
+        
+        $("li").toggle("slow");
+      });  
+  });
   }
 
    // logout section

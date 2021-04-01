@@ -94,7 +94,7 @@
     <ul>
         <button>🞬</button>
         <li style="margin-left: 50px;">
-            <img src="../../assets/img/images/aliance_1.JPG" alt="alliance logo"   srcset="">
+            <!-- <img src="../../assets/img/images/aliance_1.JPG" alt="alliance logo"   srcset=""> -->
         </li>
           <li  > 
                 <a [routerLink]="['/user']" routerLinkActive="active" >Dashboard</a>
@@ -103,19 +103,10 @@
           <li><a [routerLink]="['/user/withdraws']" routerLinkActive="active">Withdraw-Histroy</a></li>
           <li><a [routerLink]="['/user/wallet']" routerLinkActive="active">Desposit-Fund</a></li>
           <li><a [routerLink]="['/user/wallets']" routerLinkActive="active">Deposit-Histroy</a></li>
-          <!-- <li><a [routerLink]="['/user/transactions']" routerLinkActive="active">Transaction Log</a></li> -->
-    
-          <li><a [routerLink]="['/user/withdraw']" routerLinkActive="active">Withdraw Fund</a></li>
-          <li><a [routerLink]="['/user/withdraws']" routerLinkActive="active">Withdraw Histroy</a></li>
-          <li><a [routerLink]="['/user/wallet']" routerLinkActive="active">Desposit Fund</a></li>
-          <li><a [routerLink]="['/user/wallets']" routerLinkActive="active">Deposit Histroy</a></li>
-          <!-- <li><a [routerLink]="['/user/transactions']" routerLinkActive="active">Transaction Log</a></li> -->
-        <!-- <li>
-            <a [routerLink]="['/login']" routerLinkActive="active"> Login </a>
-        </li>
-        <li>
-            <a  [routerLink]="['/register']" routerLinkActive="active"> Register </a>
-        </li> -->
+          <li><a [routerLink]="['/user/new-invest']" routerLinkActive="active">New Investment</a></li>
+          <li><a [routerLink]="['/user/invest-history']" routerLinkActive="active">Investment Histroy</a></li>
+          <li><a [routerLink]="['/user/recent']" routerLinkActive="active">Recent Investment</a></li>
+          <li><a href (click)="logout()" routerLinkActive="active">Logout</a></li>
     </ul>
 </nav>
 <router-outlet></router-outlet>
