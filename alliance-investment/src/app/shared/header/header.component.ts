@@ -35,5 +35,11 @@ export class HeaderComponent implements OnInit {
         });  
 		});
   }
+
+   // logout section
+   logout() {
+    this._authService.deleteToken();
+    this._router.navigate(['/login']);  
+  }
   
 }

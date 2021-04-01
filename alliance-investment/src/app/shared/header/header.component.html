@@ -23,12 +23,16 @@
         <li > 
             <a [routerLink]="['/contact']" routerLinkActive="active">Contact Us </a>
         </li>
-        <li>
+        <li *ngIf="!userDetail">
             <a [routerLink]="['/login']" routerLinkActive="active"> Login </a>
         </li>
-        <li>
+        <li *ngIf="!userDetail">
             <a  [routerLink]="['/register']" routerLinkActive="active"> Register </a>
         </li>
+        <li  *ngIf="userDetail"> 
+            <a [routerLink]="['/user']" routerLinkActive="active">Dashboard </a>
+        </li >
+        <li *ngIf="userDetail"> <a href (click)="logout()" routerLinkActive="active">Logout</a></li>
     </ul>
 </nav>
 <!-- New Navbar ends -->
