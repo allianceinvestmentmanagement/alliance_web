@@ -711,7 +711,7 @@ WalletComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineCo
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](217, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](218, "h6");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](219, "U28219496");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](219, "P1045012422");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](220, "br");
