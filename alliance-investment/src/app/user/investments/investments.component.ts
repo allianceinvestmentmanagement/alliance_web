@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/core/data/user.service';
 
 @Component({
   selector: 'app-investments',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./investments.component.scss']
 })
 export class InvestmentsComponent implements OnInit {
+  investments: any;
 
-  constructor() { }
+ 
+  constructor(private _userService: UserService) { }
 
   ngOnInit(): void {
+    this.getHistory();
+  }
+  getHistory() {
+    this._userService.getInvests().subscribe((data: any) => {
+      this.investments = data['data'];
+    }, err => {
+      console.log(err);
+    })
   }
 
 }

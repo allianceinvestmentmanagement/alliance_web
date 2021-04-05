@@ -1,3 +1,36 @@
 .bg{
     background-image: url('../../../assets/img/bg/slide1.jpg');
 }
+
+.rounded-0{
+    cursor: pointer;
+    color: #fff;
+}
+.color_white{
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.orange_color{
+    color: #e63205 !important; 
+}
+
+.btn-primary{
+    background-color: #e63205 !important; 
+    border-color: #e63205 !important; ;
+}
+.detail{
+    overflow-x: scroll;
+}
+a{
+    color: #fff !important;
+}
+h5{
+    color: #e63205 !important;   
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #e63205 !important;
+    border-color: #e63205 !important;
+}

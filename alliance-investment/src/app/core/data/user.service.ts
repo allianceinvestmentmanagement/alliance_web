@@ -70,4 +70,24 @@ export class UserService {
         })
       });
   }
+  // Function to invest
+    invest(body: any) {
+      return this._http.post(`${url}/user/invest`, body,  {
+        observe: 'body',
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json', 
+         'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
+   // Function to get list of invests
+  getInvests() {
+    return this._http.get(`${url}/user/invest`,   {
+      observe: 'body',
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json', 
+       'Authorization': 'Bearer ' + this._authService.getToken()
+      })
+    });
+  }
 }
