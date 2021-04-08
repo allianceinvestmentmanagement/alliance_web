@@ -9,6 +9,9 @@ import { UserService } from 'src/app/core/data/user.service';
 export class DashboardComponent implements OnInit {
   totalwithdraw: any;
   totaldeposit: any;
+  referralCodes: any;
+  textMessage: any;
+  msgHideAndShow:boolean=false;  
 
   constructor(private _userService: UserService) { }
 
@@ -17,14 +20,30 @@ export class DashboardComponent implements OnInit {
     getTotalWithdraw$.subscribe((res: any) => {
         this.totalwithdraw = res.result;
     }, error => {
-      console.log(error);
     })
     const getTotalDeposit$ = this._userService.getTotalDeposit();
     getTotalDeposit$.subscribe((res: any) => {
         this.totaldeposit = res.result;
     }, error => {
-      console.log(error);
+    })
+    const referralCode$ = this._userService.getReferralCode();
+       referralCode$.subscribe((res: any) => {
+      this.referralCodes = res.user.referral_code;
+    }, error => {
     })
   }
-
+  textMessageFunc(msgText){  
+        this.textMessage=msgText+" Copied to Clipboard";  
+        this.msgHideAndShow=true;  
+        setTimeout(() => {  
+          this.textMessage="";  
+          this.msgHideAndShow=false;  
+        }, 1000);  
+      } 
+  copyInputMessage(inputElement) {  
+        inputElement.select();  
+        document.execCommand('copy');  
+        inputElement.setSelectionRange(0, 0);  
+          this.textMessageFunc('Text');    
+      }  
 }

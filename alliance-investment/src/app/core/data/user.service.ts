@@ -20,6 +20,16 @@ export class UserService {
       })
     });
   }
+  // Referral code
+  getReferralCode(){
+    return this._http.get(`${url}/get_code`,  {
+      observe: 'body',    
+      headers:  new HttpHeaders({
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + this._authService.getToken()
+      })
+    });
+  }
   // Function to get wallet history
   getwalletHistory() {
     return this._http.get(`${url}/user/wallet_history`,  {

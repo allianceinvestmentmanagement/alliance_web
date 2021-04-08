@@ -39,21 +39,37 @@
                 </div>
             </div>
             <div class="row">
+                    <div class="col-md-2">
+                        Your Referral Code
+                        <br><br>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea #userinput style="font-weight: 200px; font-size:25px; text-transform: uppercase; padding-top: 3px; text-align: center;"  readonly class="form-control">
+                            {{referralCodes}}
+                        </textarea> 
+                        <br><br>
+                    </div>
+                    <div class="col-md-2">
+                        <a type="button" (click)="copyInputMessage(userinput)" class="btn btn-success btn-block" 
+                        style="color: #fff; cursor: pointer;">Copy to Clipboard
+                    </a>  
+                    <br><br>
+                    </div>
                 <div class="col-12">
                     <div class="stepwizard">
                         <div class="stepwizard-row">
                             <div class="stepwizard-step">
-                                <button type="button" class="active btn btn-circle"><i class="fab fa-wpforms"></i></button>
+                                <span  type="button" class="active btn btn-circle"><i style="padding-top: 20px;" class="fab fa-wpforms"></i></span>
                                 <h6><a >Wallet Ballance</a></h6>
                                 
                             </div>
                             <div class="stepwizard-step">
-                                <button type="button" class="btn btn-circle"><i class="fa fa-list-alt"></i></button>
+                                <span type="button" class="btn btn-circle"><i style="padding-top: 20px;" class="fa fa-list-alt"></i></span>
                                 <h6><a >Credit Wallet</a></h6>
                             
                             </div>
                             <div class="stepwizard-step">
-                                <button type="button" class="btn btn-circle" disabled="disabled"><i class="fab fa-opencart"></i></button>
+                                <span type="button" class="btn btn-circle" disabled="disabled"><i style="padding-top: 20px;" class="fab fa-opencart"></i></span>
                                 <h6><a >Total Transaction</a></h6>  
                             </div>
                         </div>
@@ -70,7 +86,7 @@
                                     <h5>Balance</h5>
                                 </div>
                                 <div class="single-buy-box-dec">
-                                    <h2>$</h2>
+                                    <h2>${{totaldeposit - totalwithdraw }} </h2>
                                 
                                     <a [routerLink]="['/user']" class="btn-style btn-filled btn-filled-2 mb-5">Check Now</a>
                                 </div>
