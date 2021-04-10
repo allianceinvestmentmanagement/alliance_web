@@ -63,13 +63,13 @@ export class RegisterLinkComponent implements OnInit {
   // Function to register
   register = async(form: userModel) => {
     console.log(form);
-  //   await  this._authService.regisetr(form).subscribe(res => {
-  //     this._router.navigate(['/login']);
-  //   },
-  //   (err) => {
-  //     console.log(err);
-  //   }
-  // );
+    await  this._authService.regisetr(form).subscribe(res => {
+      this._router.navigate(['/login']);
+    },
+    (err) => {
+      console.log(err);
+    }
+  );
   } 
 
 }
