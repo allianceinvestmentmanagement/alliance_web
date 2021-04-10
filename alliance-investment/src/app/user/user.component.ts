@@ -34,4 +34,58 @@ export class UserComponent implements OnInit {
     this._authService.deleteToken();
     this._router.navigate(['/login']);  
   }
+
+  home() {
+    this._router.navigate(['/']).then(() => {
+       window.location.reload();
+    })
+  }
+
+  dashboard() {
+    this._router.navigate(['/user']).then(() => {
+       window.location.reload();
+    })
+  }
+
+  fund() {
+    this._router.navigate(['/user/withdraw']).then(() => {
+       window.location.reload();
+    })
+  }
+
+  funds() {
+    this._router.navigate(['/user/withdraws']).then(() => {
+       window.location.reload();
+    })
+  }
+
+  wallet() {
+    this._router.navigate(['/user/wallet']).then(() => {
+       window.location.reload();
+    })
+  }
+
+  wallets() {
+    this._router.navigate(['/user/wallets']).then(() => {
+       window.location.reload();
+    })
+  }
+
+  new() {
+    this._router.navigate(['/user/new-invest']).then(() => {
+       window.location.reload();
+    })
+  }
+
+  news() {
+    this._router.navigate(['/user/invest-history']).then(() => {
+       window.location.reload();
+    })
+  }
+
+  recent() {
+    this._router.navigate(['/user/recent']).then(() => {
+       window.location.reload();
+    })
+  }
 }

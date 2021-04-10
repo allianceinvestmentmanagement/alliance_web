@@ -3,7 +3,7 @@
     <input type="checkbox" id="nav-check">
     <div class="nav-header">
       <div class="nav-title">
-        Alliance Investment Management
+        <!-- Alliance Investment Management -->
       </div>
     </div>
     <div class="nav-btn">
@@ -16,33 +16,33 @@
     
     <div class="nav-links">
        
-        <a [routerLink]="['/']" routerLinkActive="active">Home </a>
+        <a class="white" href  [routerLink]="['/']" routerLinkActive="active">Home </a>
       
      
-        <a [routerLink]="['/about']" routerLinkActive="active"> About Us </a>
+        <a  class="white" (click)="about()" > About Us </a>
     
   
-        <a [routerLink]="['/faq']" routerLinkActive="active"> Faq </a>
+        <a  class="white" (click)="faq()"> Faq </a>
     
      
-        <a [routerLink]="['/pricing']" routerLinkActive="active">Investment Plans</a>
+        <a  class="white" (click)="pricing()">Investment Plans</a>
     
        
-            <a [routerLink]="['/support']" routerLinkActive="active"> Support </a>
+            <a  class="white" (click)="support()"> Support </a>
         
    
-            <a [routerLink]="['/contact']" routerLinkActive="active">Contact Us </a>
+            <a  class="white" (click)="contact()">Contact Us </a>
         
         
-            <a *ngIf="!userdetail" [routerLink]="['/login']" routerLinkActive="active"> Login </a>
+            <a  class="white" *ngIf="!userdetail" (click)="login()"> Login </a>
         
      
-            <a *ngIf="!userdetail"  [routerLink]="['/register']" routerLinkActive="active"> Register </a>
+            <a  class="white" *ngIf="!userdetail"  (click)="register()"> Register </a>
         
        
-            <a *ngIf="userdetail" [routerLink]="['/user']" routerLinkActive="active">Dashboard </a>
+            <a  class="white" *ngIf="userdetail" (click)="dashboard()">Dashboard </a>
         
-            <a *ngIf="userdetail" href (click)="logout()" routerLinkActive="active">Logout</a>
+            <a class="white" *ngIf="userdetail" href (click)="logout()" routerLinkActive="active">Logout</a>
     </div>
   </div>
 

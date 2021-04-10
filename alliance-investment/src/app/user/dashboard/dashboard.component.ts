@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/core/data/user.service';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -13,9 +13,14 @@ export class DashboardComponent implements OnInit {
   textMessage: any;
   msgHideAndShow:boolean=false;  
 
-  constructor(private _userService: UserService) { }
+  constructor(private _userService: UserService, private loc: Location) { }
 
   ngOnInit(): void {
+    const angularRoute = this.loc.path();
+    const url = window.location.href;
+    console.log(angularRoute);
+  
+    console.log(window.location.href);
     const getTotalWithdraw$ = this._userService.getTotalWithdraw();
     getTotalWithdraw$.subscribe((res: any) => {
         this.totalwithdraw = res.result;
@@ -28,7 +33,7 @@ export class DashboardComponent implements OnInit {
     })
     const referralCode$ = this._userService.getReferralCode();
        referralCode$.subscribe((res: any) => {
-      this.referralCodes = res.user.referral_code;
+      this.referralCodes  =  "https://www.allianceinvestmanagement.com/register/" + res.user.referral_code;
     }, error => {
     })
   }

@@ -10,6 +10,7 @@ import { MainComponent } from './main.component';
 import { MissionComponent } from './mission/mission.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { RegisterLinkComponent } from './register-link/register-link.component';
 import { RegisterComponent } from './register/register.component';
 import { RiskComponent } from './risk/risk.component';
 import { SupportComponent } from './support/support.component';
@@ -75,6 +76,10 @@ const routes: Routes = [
       {
         path: 'register',
         component: RegisterComponent
+      },
+      {
+        path: 'register/:token',
+        component: RegisterLinkComponent
       },
     ]
   }

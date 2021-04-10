@@ -41,5 +41,45 @@ export class HeaderComponent implements OnInit {
     this._authService.deleteToken();
     this._router.navigate(['/login']);  
   }
+  about() {
+    this._router.navigate(['/about']).then(() => {
+       window.location.reload();
+    })
+  }
   
+  faq() {
+    this._router.navigate(['/faq']).then(() => {
+       window.location.reload();
+    });
+  }
+  pricing() {
+    this._router.navigate(['/pricing']).then(() => {
+       window.location.reload();
+    });
+  }
+  support() {
+    this._router.navigate(['/support']).then(() => {
+       window.location.reload();
+    });
+  }
+  contact() {
+    this._router.navigate(['/contact']).then(() => {
+       window.location.reload();
+    });
+  }
+  login() {
+    this._router.navigate(['/login']).then(() => {
+       window.location.reload();
+    });
+  }
+  register() {
+    this._router.navigate(['/register']).then(() => {
+       window.location.reload();
+    });
+  }
+  dashboard() {
+    this._router.navigate(['/user']).then(() => {
+       window.location.reload();
+    });
+  }
 }

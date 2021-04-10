@@ -3,7 +3,7 @@
     <input type="checkbox" id="nav-check">
     <div class="nav-header">
       <div class="nav-title">
-        Alliance Investment Management
+        <!-- Alliance Investment Management -->
       </div>
     </div>
     <div class="nav-btn">
@@ -15,16 +15,16 @@
     </div>
     
     <div class="nav-links">
-          <a class="white" [routerLink]="['/']" routerLinkActive="active" >GO Home</a>
-          <a class="white" [routerLink]="['/user']" routerLinkActive="active" >Dashboard</a>
-          <a class="white" [routerLink]="['/user/withdraw']" routerLinkActive="active">Withdraw-Fund</a>
-          <a class="white" [routerLink]="['/user/withdraws']" routerLinkActive="active">Withdraw-Histroy</a>
-          <a class="white" [routerLink]="['/user/wallet']" routerLinkActive="active">Desposit-Fund</a>
-          <a class="white" [routerLink]="['/user/wallets']" routerLinkActive="active">Deposit-Histroy</a>
-          <a class="white" [routerLink]="['/user/new-invest']" routerLinkActive="active">New Investment</a>
-          <a class="white" [routerLink]="['/user/invest-history']" routerLinkActive="active">Investment Histroy</a>
-          <a class="white" [routerLink]="['/user/recent']" routerLinkActive="active">Recent Investment</a>
-          <a class="white" (click)="logout()" routerLinkActive="active">Logout</a>
+          <a class="white" (click)="home()" >Go Home</a>
+          <a class="white" (click)="dashboard()" >Dashboard</a>
+          <a class="white" (click)="fund()">Withdraw-Fund</a>
+          <a class="white"  (click)="funds()" >Withdraw-History</a>
+          <a class="white"  (click)="wallet()">Desposit-Fund</a>
+          <a class="white"  (click)="wallets()">Deposit-History</a>
+          <a class="white"  (click)="new()">New Investment</a>
+          <a class="white"  (click)="news()">Investment History</a>
+          <a class="white"   (click)="recent()">Recent Investment</a>
+          <a class="white" (click)="logout()" >Logout</a>
     </div>
   </div>
 
