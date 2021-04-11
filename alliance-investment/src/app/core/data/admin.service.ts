@@ -47,4 +47,40 @@ export class AdminService {
         })
       });
     }
+    approve_deposit(id: any){
+      return this._http.get(`${url}/admin/approve_deposit/${id}`,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
+    cancel_deposit(id: any){
+      return this._http.get(`${url}/admin/cancel_deposit/${id}`,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
+    approve_withdraw(id: any){
+      return this._http.get(`${url}/admin/approve_withdraw/${id}`,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
+    cancel_withdraw(id: any){
+      return this._http.get(`${url}/admin/cancel_withdraw/${id}`,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
 }

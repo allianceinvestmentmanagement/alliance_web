@@ -29,4 +29,36 @@ export class AdminComponent implements OnInit {
     this._authService.deleteToken();
     this._router.navigate(['/login']);  
   }
+  home() {
+    this._router.navigate(['/']).then(() => {
+      window.location.reload();
+   })  
+  }
+    // logout section
+    dashboard() {
+      this._router.navigate(['/panel/admin']).then(() => {
+        window.location.reload();
+     })  
+    }
+    users() {
+      this._router.navigate(['/panel/admin/users']).then(() => {
+        window.location.reload();
+     })  
+    }
+    deposit() {
+      this._router.navigate(['/panel/admin/deposits']).then(() => {
+        window.location.reload();
+     })  
+    }
+    withdraw() {
+      this._router.navigate(['/panel/admin/withdraws']).then(() => {
+        window.location.reload();
+     })  
+    }
+    message() {
+      this._router.navigate(['/panel/admin/messages']).then(() => {
+        window.location.reload();
+     })  
+    }
+    
 }

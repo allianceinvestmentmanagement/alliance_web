@@ -76,7 +76,6 @@ export class WalletComponent implements OnInit {
       })
   }
   pay_btc_modal() {
-    console.log('I want to pay with this platform.');
   }
 
   pay_ethereum_modal(){

@@ -1,4 +1,4 @@
-<nav>
+<!-- <nav>
     <ul>
         <button>🞬</button>
         <li style="margin-left: 50px;">
@@ -23,7 +23,33 @@
         <a class="logout"> Logout </a>
       </li>
     </ul>
-  </nav>
+  </nav> -->
+  <!-- New Navbar start -->
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <!-- Alliance Investment Management -->
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+        <a class="white" (click)="home()" >Go Home</a>
+        <a class="white" (click)="dashboard()" >Dashboard</a>
+        <a class="white" (click)="users()">Manage User</a>
+        <a class="white"  (click)="deposit()" >Manage Deposit</a>
+        <a class="white"  (click)="withdraw()">Manage Withdraws</a>
+        <a class="white"  (click)="message()">Messages</a>
+        <a class="white" (click)="logout()" >Logout</a>
+  </div>
+</div>
 <div>
     <router-outlet></router-outlet>
 </div>

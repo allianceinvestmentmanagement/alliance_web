@@ -1,3 +1,17 @@
+<section id="page-banner" style="margin-top: -30px;">
+    <div class="single-page-title-area overlay bg" data-background="assets/img/bg/slide1.jpg">
+          <div class="auto-container">
+              <div class="row">
+                  <div class="col-12 text-center">
+                      <div class="single-page-title">
+                          <h2>Admin Withdraw Panel</h2>
+                      </div>
+                  </div>
+              </div>
+              <!-- end row-->
+          </div>
+      </div>
+  </section>
 <!-- END PAGE BANNER AND BREADCRUMBS -->
 <section id="wallet" class="section-padding">
     <div class="container">	 
@@ -25,8 +39,8 @@
                         <td></td>
                         <td>{{item?.created_at | date}}</td>
                         <td>
-                            <button class="btn btn-danger">Rejected</button>
-                            <button class="btn btn-success">Approve</button>
+                            <button class="btn btn-danger" (click)="rejected(item?._id)">Rejected</button>
+                            <button class="btn btn-success" (click)="approve(item?._id)">Approve</button>
                         </td>
                         </tr>
                     </tbody>

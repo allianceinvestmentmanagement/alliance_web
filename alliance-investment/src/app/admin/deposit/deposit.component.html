@@ -1,3 +1,17 @@
+<section id="page-banner" style="margin-top: -30px;">
+  <div class="single-page-title-area overlay bg" data-background="assets/img/bg/slide1.jpg">
+        <div class="auto-container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="single-page-title">
+                        <h2>Admin Deposit Panel</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- end row-->
+        </div>
+    </div>
+</section>
 <!-- END PAGE BANNER AND BREADCRUMBS -->
 <section id="wallet" class="section-padding">
     <div class="container">	 
@@ -13,6 +27,7 @@
                         <th>Payment Source</th>
                         <th>Date</th>
                         <th>Message</th> 
+                        <th>Actons</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,6 +38,10 @@
                         <td>{{item?.depositor_source}}</td>
                         <td>{{item?.created_at | date}}</td>
                         <td>{{item?.depositor_message}}</td>
+                        <td >
+                            <a (click)="approve(item?._id)" class="btn btn-success white">Approve</a>
+                            <a (click)="approve(item?._id)" class="btn btn-danger white">Cancel</a>
+                        </td>
                         </tr>
                     </tbody>
                     </table>
