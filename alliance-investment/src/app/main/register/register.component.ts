@@ -31,6 +31,10 @@ export class RegisterComponent implements OnInit {
       Validators.minLength(5),
       Validators.required
     ])),
+    c_password: new FormControl('', Validators.compose([
+      Validators.minLength(5),
+      Validators.required
+    ])),
   });
   errorMessage: string;
   validation_messages = {
