@@ -8,7 +8,7 @@ export class AuthService {
 
   constructor(private _http: HttpClient) { }
   // Function To login
-  regisetr(body: any) {
+  register(body: any) {
     return this._http.post(`${url}/register`, body,  {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
@@ -24,6 +24,15 @@ export class AuthService {
     // Function to get User Details
     getUserInfo(){
       return this._http.get(`${url}/userInfo`,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this.getToken()
+        })
+      });
+    }
+    update(body: any){
+      return this._http.post(`${url}/updateuserinfo`, body,  {
         observe: 'body',    
         headers:  new HttpHeaders({
           'Accept': 'application/json',

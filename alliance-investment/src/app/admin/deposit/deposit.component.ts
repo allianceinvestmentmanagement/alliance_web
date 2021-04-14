@@ -21,7 +21,7 @@ export class DepositComponent implements OnInit {
      this._adminService.approve_deposit(item).subscribe(data => {
       alert(`${data['message']}`); 
      }, err => {
-       alert(`${err['message']}`); 
+       alert(`${err['error']['message']}`); 
      })
   }
   cancel(item: any) {

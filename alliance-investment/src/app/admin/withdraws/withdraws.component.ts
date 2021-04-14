@@ -20,7 +20,7 @@ export class WithdrawsComponent implements OnInit {
     this._adminService.cancel_withdraw(item).subscribe(data => {
       alert(`${data['message']}`); 
      }, err => {
-      alert(`${err['message']}`); 
+      alert(`${err['error']['message']}`); 
      })
   }
   approve(item: any) {

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InvestmentsComponent } from './investments/investments.component';
 import { NewInvestComponent } from './new-invest/new-invest.component';
+import { ProfileComponent } from './profile/profile.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { UserComponent } from './user.component';
 import { WalletComponent } from './wallet/wallet.component';
@@ -46,6 +47,10 @@ const routes: Routes = [
       {
         path: 'invest-history',
         component: InvestmentsComponent
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent
       },
     ]
   }

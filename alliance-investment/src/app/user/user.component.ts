@@ -83,6 +83,12 @@ export class UserComponent implements OnInit {
     })
   }
 
+  profile() {
+    this._router.navigate(['/user/profile']).then(() => {
+       window.location.reload();
+    })
+  }
+
   recent() {
     this._router.navigate(['/user/recent']).then(() => {
        window.location.reload();

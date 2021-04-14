@@ -18,9 +18,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     const angularRoute = this.loc.path();
     const url = window.location.href;
-    console.log(angularRoute);
-  
-    console.log(window.location.href);
     const getTotalWithdraw$ = this._userService.getTotalWithdraw();
     getTotalWithdraw$.subscribe((res: any) => {
         this.totalwithdraw = res.result;
