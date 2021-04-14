@@ -8,10 +8,11 @@ import { UsersComponent } from './users/users.component';
 import { WithdrawsComponent } from './withdraws/withdraws.component';
 import { DepositComponent } from './deposit/deposit.component';
 import { MessagesComponent } from './messages/messages.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 @NgModule({
-  declarations: [DashboardComponent, AdminComponent, UsersComponent, WithdrawsComponent, DepositComponent, MessagesComponent],
+  declarations: [DashboardComponent, AdminComponent, UsersComponent, WithdrawsComponent, DepositComponent, MessagesComponent, SettingsComponent],
   imports: [
     CommonModule,
     AdminRoutingModule

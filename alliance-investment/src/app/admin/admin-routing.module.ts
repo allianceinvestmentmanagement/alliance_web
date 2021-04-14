@@ -4,6 +4,7 @@ import { AdminComponent } from './admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DepositComponent } from './deposit/deposit.component';
 import { MessagesComponent } from './messages/messages.component';
+import { SettingsComponent } from './settings/settings.component';
 import { UsersComponent } from './users/users.component';
 import { WithdrawsComponent } from './withdraws/withdraws.component';
 
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'messages',
         component: MessagesComponent
+      },
+      {
+        path: 'settings',
+        component: SettingsComponent
       }
     ]
   }

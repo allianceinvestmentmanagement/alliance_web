@@ -14,7 +14,6 @@ export class MessagesComponent implements OnInit {
   ngOnInit(): void {
     this._adminService.getMessages().subscribe((data: any) => {
       this.message = data['data'];
-      console.log(this.message);
     })
   }
 

@@ -18,16 +18,16 @@ export class WithdrawsComponent implements OnInit {
 
   rejected(item: any) {
     this._adminService.cancel_withdraw(item).subscribe(data => {
-      console.log(data);
+      alert(`${data['message']}`); 
      }, err => {
-       console.log(err);
+      alert(`${err['message']}`); 
      })
   }
   approve(item: any) {
     this._adminService.approve_withdraw(item).subscribe(data => {
-      console.log(data);
+      alert(`${data['message']}`); 
      }, err => {
-       console.log(err);
+      alert(`${err['error']['message']}`); 
      })
   }
 

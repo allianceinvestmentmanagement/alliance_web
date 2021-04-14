@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from 'src/app/core/data/admin.service';
 declare var $: any;
 
 @Component({
@@ -7,8 +8,25 @@ declare var $: any;
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  message: any;
+  deposits: any;
+  withdraws: any;
+  users: any;
 
-  constructor() { }
+  constructor(private _adminService: AdminService) {
+    this._adminService.getMessages().subscribe((data: any) => {
+      this.message = data['data'];
+    })
+    this._adminService.getDeposits().subscribe((data: any) => {
+      this.deposits = data['data'];
+     })
+     this._adminService.getUsers().subscribe((data: any) => {
+      this.users = data['data'];
+    })
+    this._adminService.getWithdraws().subscribe((data: any) => {
+      this.withdraws = data['data'];
+    })
+   }
 
   ngOnInit(): void {
     function $(selector) {

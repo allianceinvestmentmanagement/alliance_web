@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
 loginUser = async (form: authModel) => {
   await  this._authService.login(form).subscribe(res => {
         this._authService.setToken(res['token']); 
+        alert('successfully login now!');
         if(res['role'] === 'user') {
           this._router.navigate(['/user']);
         } else if (res['role'] === 'admin') {
@@ -53,6 +54,7 @@ loginUser = async (form: authModel) => {
       },
       (err) => {
         console.log(err);
+        alert(`${err['error']['message']}`)
       }
     );
 }

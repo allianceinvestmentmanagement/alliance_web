@@ -13,21 +13,23 @@ export class DepositComponent implements OnInit {
   ngOnInit(): void {
     this._adminService.getDeposits().subscribe((data: any) => {
      this.deposits = data['data'];
+     console.log(this.deposits);
     })
   }
 
   approve(item: any) {
      this._adminService.approve_deposit(item).subscribe(data => {
-      console.log(data);
+      alert(`${data['message']}`); 
      }, err => {
-       console.log(err);
+       alert(`${err['message']}`); 
      })
   }
   cancel(item: any) {
     this._adminService.cancel_deposit(item).subscribe(data => {
-      console.log(data);
+      alert(`${data['message']}`); 
     },err => {
       console.log(err);
+      alert(`${err['error']['message']}`); 
     })
   }
 }

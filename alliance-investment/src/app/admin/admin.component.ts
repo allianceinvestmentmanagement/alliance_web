@@ -45,6 +45,11 @@ export class AdminComponent implements OnInit {
         window.location.reload();
      })  
     }
+    settings() {
+      this._router.navigate(['/panel/admin/settings']).then(() => {
+        window.location.reload();
+     })  
+    }
     deposit() {
       this._router.navigate(['/panel/admin/deposits']).then(() => {
         window.location.reload();
