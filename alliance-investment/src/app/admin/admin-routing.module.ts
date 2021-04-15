@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DepositComponent } from './deposit/deposit.component';
+import { InvestmentComponent } from './investment/investment.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SettingsComponent } from './settings/settings.component';
 import { UsersComponent } from './users/users.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
       {
         path: 'settings',
         component: SettingsComponent
+      },
+      {
+        path: 'invest',
+        component: InvestmentComponent
       }
     ]
   }

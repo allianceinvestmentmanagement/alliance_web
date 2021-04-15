@@ -9,13 +9,17 @@ import { WithdrawsComponent } from './withdraws/withdraws.component';
 import { DepositComponent } from './deposit/deposit.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SettingsComponent } from './settings/settings.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InvestmentComponent } from './investment/investment.component';
 
 
 @NgModule({
-  declarations: [DashboardComponent, AdminComponent, UsersComponent, WithdrawsComponent, DepositComponent, MessagesComponent, SettingsComponent],
+  declarations: [DashboardComponent, AdminComponent, UsersComponent, WithdrawsComponent, DepositComponent, MessagesComponent, SettingsComponent, InvestmentComponent],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

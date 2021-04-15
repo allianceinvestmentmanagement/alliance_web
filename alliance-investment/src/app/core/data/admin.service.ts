@@ -83,4 +83,13 @@ export class AdminService {
         })
       });
     }
+    wallet_update(body: any){
+      return this._http.post(`${url}/admin/create_wallet`, body,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
 }
