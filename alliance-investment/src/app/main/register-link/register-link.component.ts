@@ -65,9 +65,10 @@ export class RegisterLinkComponent implements OnInit {
     console.log(form);
     await  this._authService.register(form).subscribe(res => {
       this._router.navigate(['/login']);
+      alert(`${res['message']}`)
     },
     (err) => {
-      console.log(err);
+      alert(`${err['error']['message']}`)
     }
   );
   } 

@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this._authService.getUserInfo().subscribe((data: any) => {
       this.userdetail = data['user'];
-      console.log(this.userdetail);
       if(data.user['name'] && data.user['role'] != 'null'   ) {
         this. isEmpty = true;
       } else {
@@ -46,6 +45,7 @@ export class HeaderComponent implements OnInit {
     this._router.navigate(['/login']);  
   }
   about() {
+    
     this._router.navigate(['/about']).then(() => {
        window.location.reload();
     })
@@ -82,8 +82,15 @@ export class HeaderComponent implements OnInit {
     });
   }
   dashboard() {
-    this._router.navigate(['/user']).then(() => {
+    let data = this.userdetail;
+    if( data['role'] === 'admin') {
+    this._router.navigate(['/panel/admin']).then(() => {
        window.location.reload();
     });
+    } else {
+      this._router.navigate(['/user']).then(() => {
+        window.location.reload();
+      });
+    }
   }
 }

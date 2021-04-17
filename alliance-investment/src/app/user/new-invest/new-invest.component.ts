@@ -74,9 +74,10 @@ export class NewInvestComponent implements OnInit {
         roi_date: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000)
       }
       this._userService.invest(body).subscribe((data: any) => {
-        console.log(data);
+        alert(`${data['message']}`);
       }, err => {
         console.log(err);
+        alert(`${err['error']['message']}`);
       })
      }  else {
 

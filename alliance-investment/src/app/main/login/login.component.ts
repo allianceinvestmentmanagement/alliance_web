@@ -53,7 +53,6 @@ loginUser = async (form: authModel) => {
       }  
       },
       (err) => {
-        console.log(err);
         alert(`${err['error']['message']}`)
       }
     );

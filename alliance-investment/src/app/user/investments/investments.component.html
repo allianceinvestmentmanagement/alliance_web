@@ -38,6 +38,7 @@
                         <th>S/N</th>
                         <th>Investment Package</th>
                         <th>Amount</th>
+                        <th>Investment Profit</th>
                         <th>Investment Start Date</th>
                         <th>Roi Due Date</th>
                         </tr>
@@ -47,6 +48,7 @@
                         <td>{{i + 1}}</td>
                         <td>{{item?.selected_package}}</td>
                         <td>{{item?.amount}}</td>
+                        <td>{{item?.invest_profit}}</td>
                         <td>{{item?.created_at | date}}</td>
                         <td>{{item?.roi_date | date}}</td>
                         </tr>

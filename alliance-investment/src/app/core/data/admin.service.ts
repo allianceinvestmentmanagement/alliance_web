@@ -47,6 +47,24 @@ export class AdminService {
         })
       });
     }
+    getInvestment(){
+      return this._http.get(`${url}/admin/invests`,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
+    fund_investment(id: any, body: any){
+      return this._http.post(`${url}/admin/fund_investor/${id}`, body,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
     approve_deposit(id: any){
       return this._http.get(`${url}/admin/approve_deposit/${id}`,  {
         observe: 'body',    
