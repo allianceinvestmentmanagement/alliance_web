@@ -2866,7 +2866,6 @@ class LoginComponent {
                     this._router.navigate(['/login']);
                 }
             }, (err) => {
-                console.log(err);
                 alert(`${err['error']['message']}`);
             });
         });
@@ -3095,8 +3094,9 @@ class RegisterLinkComponent {
             console.log(form);
             yield this._authService.register(form).subscribe(res => {
                 this._router.navigate(['/login']);
+                alert(`${res['message']}`);
             }, (err) => {
-                console.log(err);
+                alert(`${err['error']['message']}`);
             });
         });
         this.token = this.activatedRoute.snapshot.paramMap.get('token');
@@ -3477,9 +3477,10 @@ class RegisterComponent {
         // Function to register
         this.register = (form) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             yield this._authService.register(form).subscribe(res => {
+                alert('successfully login now!');
                 this._router.navigate(['/login']);
             }, (err) => {
-                console.log(err);
+                alert(`${err['error']['message']}`);
             });
         });
     }

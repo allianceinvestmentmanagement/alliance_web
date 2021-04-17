@@ -56,7 +56,6 @@ class HeaderComponent {
     ngOnInit() {
         this._authService.getUserInfo().subscribe((data) => {
             this.userdetail = data['user'];
-            console.log(this.userdetail);
             if (data.user['name'] && data.user['role'] != 'null') {
                 this.isEmpty = true;
             }
@@ -122,9 +121,17 @@ class HeaderComponent {
         });
     }
     dashboard() {
-        this._router.navigate(['/user']).then(() => {
-            window.location.reload();
-        });
+        let data = this.userdetail;
+        if (data['role'] === 'admin') {
+            this._router.navigate(['/panel/admin']).then(() => {
+                window.location.reload();
+            });
+        }
+        else {
+            this._router.navigate(['/user']).then(() => {
+                window.location.reload();
+            });
+        }
     }
 }
 HeaderComponent.ɵfac = function HeaderComponent_Factory(t) { return new (t || HeaderComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core_data_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
