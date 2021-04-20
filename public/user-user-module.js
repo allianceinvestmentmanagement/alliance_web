@@ -1089,9 +1089,9 @@ class NewInvestComponent {
                 roi_date: new Date(Date.now() + 21 * 24 * 60 * 60 * 1000)
             };
             this._userService.invest(body).subscribe((data) => {
-                console.log(data);
+                alert(`${data['message']}`);
             }, err => {
-                console.log(err);
+                alert(`${err['error']['message']}`);
             });
         }
         else if (this.selected_package === ' Plantium') {
@@ -1103,7 +1103,6 @@ class NewInvestComponent {
             this._userService.invest(body).subscribe((data) => {
                 alert(`${data['message']}`);
             }, err => {
-                console.log(err);
                 alert(`${err['error']['message']}`);
             });
         }
@@ -1938,11 +1937,10 @@ class WithdrawComponent {
     submit(data) {
         this._userService.requestWithdraw(this.withdrawForm.value).subscribe((data) => {
             this.withdrawForm.reset();
-            console.log(data);
+            alert(`${data['message']}`);
             this._router.navigate(['/user/withdraws']);
         }, err => {
-            console.log(err);
-            console.log(err);
+            alert(`${err['error']['message']}`);
         });
     }
 }
@@ -2210,7 +2208,6 @@ __webpack_require__.r(__webpack_exports__);
 
 const _c0 = function () { return ["/"]; };
 const _c1 = function () { return ["/user"]; };
-const _c2 = function () { return ["/contact"]; };
 class DashboardComponent {
     constructor(_userService, loc) {
         this._userService = _userService;
@@ -2252,7 +2249,7 @@ class DashboardComponent {
     }
 }
 DashboardComponent.ɵfac = function DashboardComponent_Factory(t) { return new (t || DashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_core_data_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"])); };
-DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], decls: 138, vars: 16, consts: [["id", "page-banner"], ["data-background", "assets/img/bg/slide1.jpg", 1, "single-page-title-area", "overlay", "bg"], [1, "auto-container"], [1, "row"], [1, "col-12", "text-center"], [1, "single-page-title"], [1, "single-page-title-area-bottom"], [1, "breadcrumb"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "breadcrumb-item", "active"], ["id", "wallet", 1, "section-padding"], [1, "container"], [1, "section-title-2"], [1, "col-md-2"], [1, "col-md-8"], ["readonly", "", 1, "form-control"], ["userinput", ""], ["type", "button", 1, "btn", "btn-success", "btn-block", 2, "color", "#fff", "cursor", "pointer", 3, "click"], [1, "col-12"], [1, "stepwizard"], [1, "stepwizard-row"], [1, "stepwizard-step"], ["type", "button", 1, "active", "btn", "btn-circle"], [1, "fab", "fa-wpforms", 2, "padding-top", "20px"], ["type", "button", 1, "btn", "btn-circle"], [1, "fa", "fa-list-alt", 2, "padding-top", "20px"], ["type", "button", "disabled", "disabled", 1, "btn", "btn-circle"], [1, "fab", "fa-opencart", 2, "padding-top", "20px"], [1, "buysell-tab-content", "tab-content"], ["id", "one", 1, "tab-pane", "animated", "fadeInRight", "active", "show"], [1, "col-lg-4", "col-md-4", "col-12", "text-center", "mb-lg-0", "mb-md-0", "mb-5"], [1, "single-buy-box"], [1, "single-buy-box-header"], [1, "single-buy-box-dec"], [1, "btn-style", "btn-filled", "btn-filled-2", "mb-5", 3, "routerLink"], [1, "col-lg-4", "col-md-4", "col-12", "text-center"], ["id", "three", 1, "tab-pane", "animated", "fadeInRight"], [1, "col-md-12"], [1, "table-responsive"], [1, "table", "table-striped", "table-sm"], ["id", "calltoaction", 1, "calltoaction-padding", "section-padding", "bg-theme"], [1, "calltoaction-two-wrap", "mb-4"], [1, "text-uppercase"], [1, "wow", "fadeInDown", "btn-style", "btn-border", "btn-border-3", 3, "routerLink"], [1, "icofont", "icofont-hand-right"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
+DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], decls: 128, vars: 14, consts: [["id", "page-banner"], ["data-background", "assets/img/bg/slide1.jpg", 1, "single-page-title-area", "overlay", "bg"], [1, "auto-container"], [1, "row"], [1, "col-12", "text-center"], [1, "single-page-title"], [1, "single-page-title-area-bottom"], [1, "breadcrumb"], [1, "breadcrumb-item"], [3, "routerLink"], [1, "breadcrumb-item", "active"], ["id", "wallet", 1, "section-padding"], [1, "container"], [1, "section-title-2"], [1, "col-md-2"], [1, "col-md-8"], ["readonly", "", 1, "form-control"], ["userinput", ""], ["type", "button", 1, "btn", "btn-success", "btn-block", 2, "color", "#fff", "cursor", "pointer", 3, "click"], [1, "col-12"], [1, "stepwizard"], [1, "stepwizard-row"], [1, "stepwizard-step"], ["type", "button", 1, "active", "btn", "btn-circle"], [1, "fab", "fa-wpforms", 2, "padding-top", "20px"], ["type", "button", 1, "btn", "btn-circle"], [1, "fa", "fa-list-alt", 2, "padding-top", "20px"], ["type", "button", "disabled", "disabled", 1, "btn", "btn-circle"], [1, "fab", "fa-opencart", 2, "padding-top", "20px"], [1, "buysell-tab-content", "tab-content"], ["id", "one", 1, "tab-pane", "animated", "fadeInRight", "active", "show"], [1, "col-lg-4", "col-md-4", "col-12", "text-center", "mb-lg-0", "mb-md-0", "mb-5"], [1, "single-buy-box"], [1, "single-buy-box-header"], [1, "single-buy-box-dec"], [1, "btn-style", "btn-filled", "btn-filled-2", "mb-5", 3, "routerLink"], [1, "col-lg-4", "col-md-4", "col-12", "text-center"], ["id", "three", 1, "tab-pane", "animated", "fadeInRight"], [1, "col-md-12"], [1, "table-responsive"], [1, "table", "table-striped", "table-sm"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
         const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -2470,44 +2467,25 @@ DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](128, "section", 41);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](129, "div", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](130, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](131, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](132, "div", 42);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](133, "h4", 43);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](134, "Want to knowe more?");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](135, "a", 44);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](136, "Contact Us ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](137, "i", 45);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](10, _c0));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](9, _c0));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](19);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("                            ", ctx.referralCodes, "\n                        ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](39);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("$", ctx.totaldeposit - ctx.totalwithdraw, " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](11, _c1));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](10, _c1));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("$", ctx.totaldeposit, "");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](12, _c1));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](11, _c1));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("$ ", ctx.totalwithdraw, "");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](13, _c1));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](12, _c1));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](14, _c1));
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](28);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](15, _c2));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](13, _c1));
     } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"]], styles: [".bg[_ngcontent-%COMP%] {\n  background-image: url('slide1.jpg');\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFxkYXNoYm9hcmQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxtQ0FBQTtBQUNKIiwiZmlsZSI6ImRhc2hib2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5iZ3tcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vLi4vYXNzZXRzL2ltZy9iZy9zbGlkZTEuanBnJyk7XHJcbn1cclxuXHJcbiJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DashboardComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
