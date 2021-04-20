@@ -75,10 +75,10 @@ const routes = [
                 path: 'faq',
                 component: _faqs_faqs_component__WEBPACK_IMPORTED_MODULE_4__["FaqsComponent"]
             },
-            {
-                path: 'support',
-                component: _support_support_component__WEBPACK_IMPORTED_MODULE_15__["SupportComponent"]
-            },
+            // {
+            //   path: 'support',
+            //   component: SupportComponent
+            // },
             {
                 path: 'support',
                 component: _support_support_component__WEBPACK_IMPORTED_MODULE_15__["SupportComponent"]
@@ -3092,7 +3092,7 @@ class RegisterLinkComponent {
         // Function to register
         this.register = (form) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             console.log(form);
-            yield this._authService.register(form).subscribe(res => {
+            yield this._authService.signup(form).subscribe(res => {
                 this._router.navigate(['/login']);
                 alert(`${res['message']}`);
             }, (err) => {
@@ -3486,7 +3486,7 @@ class RegisterComponent {
         };
         // Function to register
         this.register = (form) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            yield this._authService.register(form).subscribe(res => {
+            yield this._authService.signup(form).subscribe(res => {
                 alert('successfully login now!');
                 this._router.navigate(['/login']);
             }, (err) => {

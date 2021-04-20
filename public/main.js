@@ -17,12 +17,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const url = "https://allianceapi.herokuapp.com/api/v1";
+// "http://localhost:3000/api/v1"
+//  
 class AuthService {
     constructor(_http) {
         this._http = _http;
     }
     // Function To login
-    register(body) {
+    signup(body) {
         return this._http.post(`${url}/register`, body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]().append('Content-Type', 'application/json')
