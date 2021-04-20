@@ -55,6 +55,10 @@ export class RegisterLinkComponent implements OnInit {
             Validators.minLength(5),
             Validators.required
           ])),
+          c_password: new FormControl('', Validators.compose([
+            Validators.minLength(5),
+            Validators.required
+          ])),
         });
       }
 

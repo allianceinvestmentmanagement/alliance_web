@@ -43,11 +43,10 @@ successMessage: any;
   submit(data: any)  {
     this._userService.requestWithdraw(this.withdrawForm.value).subscribe((data: any) => {
       this.withdrawForm.reset();
-      console.log(data);
+      alert(`${data['message']}`)
       this._router.navigate(['/user/withdraws']);
     }, err => {
-      console.log(err);
-       console.log(err);
+      alert(`${err['error']['message']}`)
     })
   }
 
