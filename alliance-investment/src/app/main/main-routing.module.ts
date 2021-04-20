@@ -45,10 +45,10 @@ const routes: Routes = [
         path: 'faq',
         component: FaqsComponent
       },
-      {
-        path: 'support',
-        component: SupportComponent
-      },
+      // {
+      //   path: 'support',
+      //   component: SupportComponent
+      // },
       {
         path: 'support',
         component: SupportComponent

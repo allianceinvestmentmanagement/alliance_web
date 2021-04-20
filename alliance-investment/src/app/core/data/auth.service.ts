@@ -1,6 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-const url =   "https://allianceapi.herokuapp.com/api/v1";
+const url = "https://allianceapi.herokuapp.com/api/v1";  
+// "http://localhost:3000/api/v1"
+//  
 @Injectable({
   providedIn: 'root'
 })
@@ -8,7 +10,7 @@ export class AuthService {
 
   constructor(private _http: HttpClient) { }
   // Function To login
-  register(body: any) {
+  signup(body: any) {
     return this._http.post(`${url}/register`, body,  {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')

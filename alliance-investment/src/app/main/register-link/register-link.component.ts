@@ -67,7 +67,7 @@ export class RegisterLinkComponent implements OnInit {
   // Function to register
   register = async(form: userModel) => {
     console.log(form);
-    await  this._authService.register(form).subscribe(res => {
+    await  this._authService.signup(form).subscribe(res => {
       this._router.navigate(['/login']);
       alert(`${res['message']}`)
     },
