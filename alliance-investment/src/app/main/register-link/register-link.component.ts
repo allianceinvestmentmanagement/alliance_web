@@ -34,6 +34,7 @@ export class RegisterLinkComponent implements OnInit {
       private activatedRoute: ActivatedRoute
       ) { 
         this.token = this.activatedRoute.snapshot.paramMap.get('token');
+        console.log(this.token)
         this.registerForm = new FormGroup({
           email: new FormControl('', Validators.compose([
             Validators.required,
@@ -66,12 +67,12 @@ export class RegisterLinkComponent implements OnInit {
   }
   // Function to register
   register = async(form: userModel) => {
-    console.log(form);
     await  this._authService.signup(form).subscribe(res => {
+      alert('You have successfully Register, Proceed to login now!');
       this._router.navigate(['/login']);
-      alert(`${res['message']}`)
     },
     (err) => {
+      console.log(err);
       alert(`${err['error']['message']}`)
     }
   );

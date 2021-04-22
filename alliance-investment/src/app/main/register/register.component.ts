@@ -60,7 +60,7 @@ export class RegisterComponent implements OnInit {
   // Function to register
   register = async(form: userModel) => {
     await  this._authService.signup(form).subscribe(res => {
-      alert('successfully login now!');
+      alert('You have successfully Register, Proceed to login now!');
       this._router.navigate(['/login']);
     },
     (err) => {
