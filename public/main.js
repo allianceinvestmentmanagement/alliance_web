@@ -16,8 +16,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const url = "https://allianceapi.herokuapp.com/api/v1";
-// "http://localhost:3000/api/v1"
+const url = "http://localhost:3000/api/v1";
+// "https://allianceapi.herokuapp.com/api/v1";  
+// 
 //  
 class AuthService {
     constructor(_http) {

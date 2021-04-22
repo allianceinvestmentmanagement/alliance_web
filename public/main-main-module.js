@@ -3091,15 +3091,16 @@ class RegisterLinkComponent {
         };
         // Function to register
         this.register = (form) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            console.log(form);
             yield this._authService.signup(form).subscribe(res => {
+                alert('You have successfully Register, Proceed to login now!');
                 this._router.navigate(['/login']);
-                alert(`${res['message']}`);
             }, (err) => {
+                console.log(err);
                 alert(`${err['error']['message']}`);
             });
         });
         this.token = this.activatedRoute.snapshot.paramMap.get('token');
+        console.log(this.token);
         this.registerForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
             email: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
@@ -3487,7 +3488,7 @@ class RegisterComponent {
         // Function to register
         this.register = (form) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             yield this._authService.signup(form).subscribe(res => {
-                alert('successfully login now!');
+                alert('You have successfully Register, Proceed to login now!');
                 this._router.navigate(['/login']);
             }, (err) => {
                 alert(`${err['error']['message']}`);
