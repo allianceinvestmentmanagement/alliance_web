@@ -1622,6 +1622,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const url = "https://allianceapi.herokuapp.com/api/v1";
+// "https://allianceapi.herokuapp.com/api/v1";
 class UserService {
     constructor(_http, _authService) {
         this._http = _http;
@@ -2229,7 +2230,8 @@ class DashboardComponent {
         });
         const referralCode$ = this._userService.getReferralCode();
         referralCode$.subscribe((res) => {
-            this.referralCodes = "https://www.allianceinvestmanagement.com/register/" + res.user.referral_code;
+            var _a;
+            this.referralCodes = "https://www.allianceinvestmanagement.com/register/" + ((_a = res === null || res === void 0 ? void 0 : res.user) === null || _a === void 0 ? void 0 : _a.userid['username']);
         }, error => {
         });
     }
