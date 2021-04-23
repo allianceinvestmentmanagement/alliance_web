@@ -27,6 +27,7 @@
                         <th>Phone Number</th>
                         <th>Username</th>
                         <th>Role</th> 
+                        <th>Action</th> 
                         </tr>
                     </thead>
                     <tbody>
@@ -37,6 +38,9 @@
                         <td>{{item?.phone_number}}</td>
                         <td>{{item?.username}}</td>
                         <td>{{item?.role}}</td>
+                        <td>
+                            <a *ngIf="item?.role != 'admin'" (click)="delete(item?._id)" class="btn btn-danger white" style="cursor: pointer;">Delete User</a>
+                        </td>
                         </tr>
                     </tbody>
                     </table>

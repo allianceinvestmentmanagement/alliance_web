@@ -17,5 +17,15 @@ export class UsersComponent implements OnInit {
       this.users = data['data'];
     })
   }
+  // Function to delete user
+  delete(id: any) {
+    this._adminService.deleteUser(id).subscribe((data: any) => {
+      alert(`${data['message']}`);
+     window.location.reload();
+    }, err => {
+      alert(`${err['error']}`);
+      console.log(err);
+    })
+  }
 
 }

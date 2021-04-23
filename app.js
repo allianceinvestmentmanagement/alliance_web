@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use(cors({
     origin:'*'
-  }));
+}));
 // view engine setup
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyparser.json());

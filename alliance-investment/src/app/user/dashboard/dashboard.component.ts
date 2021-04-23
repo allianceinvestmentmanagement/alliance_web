@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
     })
     const referralCode$ = this._userService.getReferralCode();
        referralCode$.subscribe((res: any) => {
-      this.referralCodes  =  "https://www.allianceinvestmanagement.com/register/" + res.user.referral_code;
+      this.referralCodes  =  "https://www.allianceinvestmanagement.com/register/" + res?.user?.userid['username'];
     }, error => {
     })
   }
