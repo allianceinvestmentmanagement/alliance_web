@@ -17,6 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const url = "https://allianceapi.herokuapp.com/api/v1";
+//  "https://allianceapi.herokuapp.com/api/v1";
 // "http://localhost:3000/api/v1";
 // "https://allianceapi.herokuapp.com/api/v1";  
 // 
@@ -30,6 +31,15 @@ class AuthService {
         return this._http.post(`${url}/register`, body, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]().append('Content-Type', 'application/json')
+        });
+    }
+    change_password(body) {
+        return this._http.post(`${url}/changePassword`, body, {
+            observe: 'body',
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + this.getToken()
+            })
         });
     }
     // Function To login
