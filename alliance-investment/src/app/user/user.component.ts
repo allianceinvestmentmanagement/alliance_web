@@ -94,4 +94,9 @@ export class UserComponent implements OnInit {
        window.location.reload();
     })
   }
+  password() {
+    this._router.navigate(['/user/password']).then(() => {
+       window.location.reload();
+    })
+  }
 }

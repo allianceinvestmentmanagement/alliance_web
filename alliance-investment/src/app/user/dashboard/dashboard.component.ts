@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit {
   referralCodes: any;
   textMessage: any;
   msgHideAndShow:boolean=false;  
+  totalinvestmentProfit: any;
 
   constructor(private _userService: UserService, private loc: Location) { }
 
@@ -28,9 +29,14 @@ export class DashboardComponent implements OnInit {
         this.totaldeposit = res.result;
     }, error => {
     })
+    const getInvestmentProfit$ = this._userService.getTotalInvestmentProfit();
+    getInvestmentProfit$.subscribe((res: any) => {
+        this.totalinvestmentProfit = res.result;
+    }, error => {
+    })
     const referralCode$ = this._userService.getReferralCode();
-       referralCode$.subscribe((res: any) => {
-      this.referralCodes  =  "https://www.allianceinvestmanagement.com/register/" + res?.user?.userid['username'];
+       referralCode$.subscribe((res: any) => { 
+      this.referralCodes  =  "https://www.allianceinvestmanagement.com/register/" + res?.user[0].userid['username'];
     }, error => {
     })
   }

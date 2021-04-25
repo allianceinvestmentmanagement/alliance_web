@@ -15,10 +15,11 @@ import { TransactionsComponent } from './transactions/transactions.component';
 import { NewInvestComponent } from './new-invest/new-invest.component';
 import { InvestmentsComponent } from './investments/investments.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 @NgModule({
-  declarations: [UserComponent, DashboardComponent, WalletComponent, WalletsComponent, WithdrawComponent, WithdrawsComponent, TransactionsComponent, NewInvestComponent, InvestmentsComponent, ProfileComponent],
+  declarations: [UserComponent, DashboardComponent, WalletComponent, WalletsComponent, WithdrawComponent, WithdrawsComponent, TransactionsComponent, NewInvestComponent, InvestmentsComponent, ProfileComponent, ChangePasswordComponent],
   imports: [
     CommonModule,
     UserRoutingModule,

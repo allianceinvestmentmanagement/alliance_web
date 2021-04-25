@@ -1,7 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthService } from './auth.service';
-const url = "https://allianceapi.herokuapp.com/api/v1"
+const url = "https://allianceapi.herokuapp.com/api/v1";
+//  "https://allianceapi.herokuapp.com/api/v1"
   // "https://allianceapi.herokuapp.com/api/v1";
 
 @Injectable({
@@ -23,7 +24,7 @@ export class UserService {
   }
   // Referral code
   getReferralCode(){
-    return this._http.get(`${url}/get_code`,  {
+    return this._http.get(`${url}/getCode`,  {
       observe: 'body',    
       headers:  new HttpHeaders({
         'Accept': 'application/json',
@@ -81,6 +82,16 @@ export class UserService {
         })
       });
   }
+  // Investment profit
+  getTotalInvestmentProfit() {
+    return this._http.get(`${url}/user/total_investment_profit`,  {
+      observe: 'body',    
+      headers:  new HttpHeaders({
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + this._authService.getToken()
+      })
+    });
+}
   // Function to invest
     invest(body: any) {
       return this._http.post(`${url}/user/invest`, body,  {

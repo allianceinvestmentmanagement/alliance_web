@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 const url = "https://allianceapi.herokuapp.com/api/v1";
+//  "https://allianceapi.herokuapp.com/api/v1";
 // "http://localhost:3000/api/v1";
 // "https://allianceapi.herokuapp.com/api/v1";  
 // 
@@ -16,6 +17,15 @@ export class AuthService {
     return this._http.post(`${url}/register`, body,  {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
+    });
+  }
+  change_password(body: any) {
+    return this._http.post(`${url}/changePassword`, body,  {
+      observe: 'body',
+      headers:  new HttpHeaders({
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + this.getToken()
+      })
     });
   }
   // Function To login
