@@ -25,7 +25,8 @@
                         <th>Payment Source</th>
                         <th>Amount</th>
                         <th>Status</th>
-                        <th>Withdraw Name</th>
+                        <th>User Wallet Id</th>
+                        <!-- <th>Withdraw Name</th> -->
                         <th>Date</th>
                         <th>Actions</th>  
                         </tr>
@@ -36,7 +37,7 @@
                         <td>{{item?.withdraw_method}}</td>
                         <td>{{item?.amount}}</td>
                         <td>{{item?.withdraw_status}}</td>
-                        <td></td>
+                        <td>{{item?.token}}</td>
                         <td>{{item?.created_at | date}}</td>
                         <td>
                             <button class="btn btn-danger" (click)="rejected(item?._id)">Rejected</button>
