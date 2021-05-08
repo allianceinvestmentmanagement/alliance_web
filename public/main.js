@@ -16,7 +16,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const url = "https://allianceapi.herokuapp.com/api/v1";
+const url = "http://localhost:3000/api/v1";
+// "https://allianceapi.herokuapp.com/api/v1";
 //  "https://allianceapi.herokuapp.com/api/v1";
 // "http://localhost:3000/api/v1";
 // "https://allianceapi.herokuapp.com/api/v1";  
@@ -52,6 +53,15 @@ class AuthService {
     // Function to get User Details
     getUserInfo() {
         return this._http.get(`${url}/userInfo`, {
+            observe: 'body',
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + this.getToken()
+            })
+        });
+    }
+    getMyReferrals(username) {
+        return this._http.get(`${url}/my_referral/${username}`, {
             observe: 'body',
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
                 'Accept': 'application/json',

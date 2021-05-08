@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/core/data/user.service';
 import { Location } from '@angular/common';
+import { AuthService } from 'src/app/core/data/auth.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -13,10 +14,16 @@ export class DashboardComponent implements OnInit {
   textMessage: any;
   msgHideAndShow:boolean=false;  
   totalinvestmentProfit: any;
+  username: any;
+  referrals: any;
 
-  constructor(private _userService: UserService, private loc: Location) { }
+  constructor(private _userService: UserService,private _authService: AuthService, private loc: Location) { }
 
   ngOnInit(): void {
+    this._authService.getUserInfo().subscribe((data: any) => {
+      this.username = data['user']['username'];
+    })
+  
     const angularRoute = this.loc.path();
     const url = window.location.href;
     const getTotalWithdraw$ = this._userService.getTotalWithdraw();
@@ -38,6 +45,14 @@ export class DashboardComponent implements OnInit {
        referralCode$.subscribe((res: any) => { 
       this.referralCodes  =  "https://www.allianceinvestmanagement.com/register/" + res?.user[0].userid['username'];
     }, error => {
+    })
+    setTimeout(() => this.getReferrals(), 1000);
+   
+  }
+
+  getReferrals() {
+    this._authService.getMyReferrals(this.username).subscribe((data: any) => {
+      this.referrals = data['data'];
     })
   }
   textMessageFunc(msgText){  
