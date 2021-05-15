@@ -86,7 +86,7 @@
                                     <h5>Balance</h5>
                                 </div>
                                 <div class="single-buy-box-dec">
-                                    <h2>${{totaldeposit - totalwithdraw }} </h2>
+                                    <h2>{{totaldeposit - totalwithdraw | currency }} </h2>
                                 
                                     <a [routerLink]="['/user']" class="btn-style btn-filled btn-filled-2 mb-5">Check Now</a>
                                 </div>
@@ -99,7 +99,7 @@
                                     <h5>Deposits</h5>
                                 </div>
                                 <div class="single-buy-box-dec">
-                                    <h2>${{totaldeposit}}</h2>
+                                    <h2>{{totaldeposit | currency}}</h2>
                                 
                                     <a [routerLink]="['/user']" class="btn-style btn-filled btn-filled-2 mb-5">Check Now</a>
                                 </div>
@@ -112,7 +112,7 @@
                                     <h5>Total Withdraws</h5>
                                 </div>
                                 <div class="single-buy-box-dec">
-                                    <h2>$ {{totalwithdraw}}</h2>
+                                    <h2> {{totalwithdraw | currency}}</h2>
                                     
                                     <a [routerLink]="['/user']" class="btn-style btn-filled btn-filled-2 mb-5">Check Now</a>
                                 </div>
