@@ -16,6 +16,7 @@ export class DashboardComponent implements OnInit {
   totalinvestmentProfit: any;
   username: any;
   referrals: any;
+  investments: any;
 
   constructor(private _userService: UserService,private _authService: AuthService, private loc: Location) { }
 
@@ -23,7 +24,7 @@ export class DashboardComponent implements OnInit {
     this._authService.getUserInfo().subscribe((data: any) => {
       this.username = data['user']['username'];
     })
-  
+     this.getHistory();
     const angularRoute = this.loc.path();
     const url = window.location.href;
     const getTotalWithdraw$ = this._userService.getTotalWithdraw();
@@ -36,11 +37,13 @@ export class DashboardComponent implements OnInit {
         this.totaldeposit = res.result;
     }, error => {
     })
-    const getInvestmentProfit$ = this._userService.getTotalInvestmentProfit();
-    getInvestmentProfit$.subscribe((res: any) => {
-        this.totalinvestmentProfit = res.result;
-    }, error => {
-    })
+    // const getInvestmentProfit$ = this._userService.getTotalInvestmentProfit();
+    // getInvestmentProfit$.subscribe((res: any) => {
+    //     this.totalinvestmentProfit = res.result;
+    //     console.log(res);
+    // }, error => {
+    //   console.log(error);
+    // })
     const referralCode$ = this._userService.getReferralCode();
        referralCode$.subscribe((res: any) => { 
       this.referralCodes  =  "https://www.allianceinvestmanagement.com/register/" + res?.user[0].userid['username'];
@@ -49,7 +52,18 @@ export class DashboardComponent implements OnInit {
     setTimeout(() => this.getReferrals(), 1000);
    
   }
-
+  getHistory() {
+    this._userService.getInvests().subscribe((data: any) => {
+      this.investments = data['data'];
+      let sum = this.investments.reduce((sum,a)=>{
+        return sum + a.invest_profit;
+      },0);
+      console.log(sum); 
+      this.totalinvestmentProfit = sum;
+    }, err => {
+      console.log(err);
+    })
+  }
   getReferrals() {
     this._authService.getMyReferrals(this.username).subscribe((data: any) => {
       this.referrals = data['data'];
