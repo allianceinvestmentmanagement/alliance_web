@@ -1405,7 +1405,7 @@ IndexComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](158, "div", 47);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](159, "div", 48);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](160, "h3", 49);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](161, "9556");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](161, "9656");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](162, "div", 50);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](163, "span", 51);
@@ -1423,7 +1423,7 @@ IndexComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](169, "div", 47);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](170, "div", 48);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](171, "h3", 49);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](172, "81945");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](172, "819495");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](173, "p");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](174, "Agriculture Investors");
@@ -1433,7 +1433,7 @@ IndexComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](175, "div", 47);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](176, "div", 48);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](177, "h3", 49);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](178, "6845");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](178, "6895");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](179, "p");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](180, "Cryptocurrency Investors");

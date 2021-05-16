@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/core/data/admin.service';
+import { AuthService } from 'src/app/core/data/auth.service';
 
 @Component({
   selector: 'app-users',
@@ -8,9 +9,10 @@ import { AdminService } from 'src/app/core/data/admin.service';
 })
 export class UsersComponent implements OnInit {
   users: any;
+  referrals: any;
 
   
-  constructor(private _adminService: AdminService) { }
+  constructor(private _adminService: AdminService, private _authService: AuthService) { }
 
   ngOnInit(): void {
     this._adminService.getUsers().subscribe((data: any) => {
@@ -24,8 +26,14 @@ export class UsersComponent implements OnInit {
      window.location.reload();
     }, err => {
       alert(`${err['error']}`);
-      console.log(err);
     })
   }
 
+  // view user downline users
+  view(username: any) {
+    this._authService.getMyReferrals(username).subscribe((data: any) => {
+      this.referrals = data['data'];
+      console.log(this.referrals);
+    })
+  }
 }

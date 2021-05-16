@@ -37,4 +37,14 @@ export class InvestmentComponent implements OnInit {
      alert(`${err['error']['message']}`)
    })
   }
+  // Function to delete investment
+  delete(id: any) {
+    this._adminService.deleteInvestment(id).subscribe((data: any) => {
+      alert(`${data['message']}`);
+     window.location.reload();
+    }, err => {
+      alert(`${err['error']}`);
+      console.log(err);
+    })
+  }
 }

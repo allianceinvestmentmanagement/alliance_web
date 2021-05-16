@@ -47,8 +47,8 @@
                                     <td>{{item?.created_at | date}}</td>
                                     <td>{{item?.roi_date | date}}</td>
                                     <td>
-                                        <button class="btn btn-danger" data-toggle="modal" data-target="#creditInvestor" style="cursor: pointer" (click)="credit(item)">Credit Investor</button>
-                                        <!-- <button class="btn btn-success" (click)="()"></button> -->
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#creditInvestor" style="cursor: pointer" (click)="credit(item)">Credit Investor</button>
+                                        <button class="btn btn-danger" (click)="delete(item?._id)">Delete </button>
                                     </td>
                                     </tr>
                                 </tbody>

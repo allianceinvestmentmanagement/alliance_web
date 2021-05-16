@@ -38,8 +38,9 @@
                         <td>{{item?.phone_number}}</td>
                         <td>{{item?.username}}</td>
                         <td>{{item?.role}}</td>
-                        <td>
+                        <td style="display: flex;">
                             <a *ngIf="item?.role != 'admin'" (click)="delete(item?._id)" class="btn btn-danger white" style="cursor: pointer;">Delete User</a>
+                            <a data-toggle="modal" data-target="#downlineModal" *ngIf="item?.role != 'admin'" (click)="view(item?.username)" class="btn btn-success white" style="cursor: pointer;">View-Downline</a>
                         </td>
                         </tr>
                     </tbody>
@@ -49,3 +50,50 @@
         </div>
     </div>
 </section>
+
+
+<!-- Modal to view downline users start -->
+<div class="modal fade" id="downlineModal" >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">LIst of Selected User Downline</h5>
+          <button  class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                <th>S/N</th>
+                                <th>Username</th>
+                                <th>User email</th>
+                               <th>Registration Date</th>
+                                 <!-- <th>Date</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of referrals; let i = index">
+                                <td>{{i + 1}}</td>
+                                <td>{{item?.username}}</td>
+                                <td>{{item?.email}}</td>
+                                <td>{{item?.created_dt | date}}</td>
+                                <!-- <td>{{item?.created_at | date}}</td> -->
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="modal-footer bg-light pull-left">
+          <button  class="btn btn-warning pull-left cancel text-green" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Modal to view downline users ends -->

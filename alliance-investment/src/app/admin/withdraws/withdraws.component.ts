@@ -30,5 +30,15 @@ export class WithdrawsComponent implements OnInit {
       alert(`${err['error']['message']}`); 
      })
   }
+  // Function to delete user withdraw
+  delete(id: any) {
+    this._adminService.deleteWithdraw(id).subscribe((data: any) => {
+      alert(`${data['message']}`);
+     window.location.reload();
+    }, err => {
+      alert(`${err['error']}`);
+      console.log(err);
+    })
+  }
 
 }

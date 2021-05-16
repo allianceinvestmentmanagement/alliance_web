@@ -31,6 +31,24 @@ export class AdminService {
         })
       });
     }
+    deleteInvestment(id: any) {
+      return this._http.delete(`${url}/admin/delete_investment/${id}`,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
+    deleteWithdraw(id: any) {
+      return this._http.delete(`${url}/admin/delete_withdraw/${id}`,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
     getDeposits(){
       return this._http.get(`${url}/admin/deposits`,  {
         observe: 'body',    

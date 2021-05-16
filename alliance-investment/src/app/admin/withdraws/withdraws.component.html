@@ -40,8 +40,9 @@
                         <td>{{item?.token}}</td>
                         <td>{{item?.created_at | date}}</td>
                         <td>
-                            <button class="btn btn-danger" (click)="rejected(item?._id)">Rejected</button>
-                            <button class="btn btn-success" (click)="approve(item?._id)">Approve</button>
+                            <button class="btn btn-warning"  style="cursor: pointer;" (click)="rejected(item?._id)">Reject</button>
+                            <button class="btn btn-success" style="cursor: pointer;" (click)="approve(item?._id)">Approve</button>
+                            <button class="btn btn-danger" style="cursor: pointer;" (click)="delete(item?._id)">Delete </button>
                         </td>
                         </tr>
                     </tbody>
