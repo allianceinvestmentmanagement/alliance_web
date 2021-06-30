@@ -13,6 +13,7 @@ export class WithdrawsComponent implements OnInit {
   ngOnInit(): void {
     this._adminService.getWithdraws().subscribe((data: any) => {
       this.withdraws = data['data'];
+      console.log(data);
     })
   }
 

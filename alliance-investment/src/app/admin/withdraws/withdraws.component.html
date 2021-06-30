@@ -26,7 +26,8 @@
                         <th>Amount</th>
                         <th>Status</th>
                         <th>User Wallet Id</th>
-                        <!-- <th>Withdraw Name</th> -->
+                        <th>Name</th>
+                        <th>Email</th>
                         <th>Date</th>
                         <th>Actions</th>  
                         </tr>
@@ -38,8 +39,10 @@
                         <td>{{item?.amount}}</td>
                         <td>{{item?.withdraw_status}}</td>
                         <td>{{item?.token}}</td>
-                        <td>{{item?.created_at | date}}</td>
-                        <td>
+                        <td>{{item?.owner?.name}}</td>
+                        <td>{{item?.owner?.email}}</td>
+                        <td >{{item?.created_at | date}}</td>
+                        <td style="display: flex;">
                             <button class="btn btn-warning"  style="cursor: pointer;" (click)="rejected(item?._id)">Reject</button>
                             <button class="btn btn-success" style="cursor: pointer;" (click)="approve(item?._id)">Approve</button>
                             <button class="btn btn-danger" style="cursor: pointer;" (click)="delete(item?._id)">Delete </button>
