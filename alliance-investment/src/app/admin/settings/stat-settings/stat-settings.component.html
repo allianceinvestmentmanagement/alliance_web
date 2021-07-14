@@ -1,0 +1,150 @@
+<section id="page-banner" style="margin-top: -30px;">
+    <div class="single-page-title-area overlay bg" data-background="assets/img/bg/slide1.jpg">
+          <div class="auto-container">
+              <div class="row">
+                  <div class="col-12 text-center">
+                      <div class="single-page-title">
+                          <h2>Admin Settings Panel</h2>
+                      </div>
+                  </div>
+              </div>
+              <!-- end row-->
+          </div>
+      </div>
+  </section>
+  <section id="wallet" class="section-padding">
+        <div class="container-fluid">
+                <div class="row">
+                        <div class="col-lg-4 col-md-3 col-12 mb-lg-0 mb-md-0 mb-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Update </h4>
+                                            <div class="single-pricings">
+                                                <div class="single-pricing-head text-center">
+                                                   Update Real Estate Investor Stat
+                                                </div>
+                                                <div class="single-pricing-body">
+                                                </div>
+                                                <div class="single-pricing-a">
+                                                    <a data-toggle="modal" data-target="#real"  (click)="real('real')" class="mt-3 btn d-block text-center btn-primary color_white" >Update </a>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-lg-4 col-md-3 col-12 mb-lg-0 mb-md-0 mb-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Update </h4>
+                                        <div class="single-pricings">
+                                            <div class="single-pricing-head text-center">
+                                               Update Crypto Investor Stat
+                                            </div>
+                                            <div class="single-pricing-body">
+                                            </div>
+                                            <div class="single-pricing-a">
+                                                <a data-toggle="modal" data-target="#crypto"  (click)="crypto('crypto')" class="mt-3 btn d-block text-center btn-primary color_white" >Update </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                       </div>
+                        <div class="col-lg-4 col-md-3 col-12 mb-lg-0 mb-md-0 mb-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Update </h4>
+                                        <div class="single-pricings">
+                                            <div class="single-pricing-head text-center">
+                                            Update Agriculture Investor Stat
+                                            </div>
+                                            <div class="single-pricing-body">
+                                            </div>
+                                            <div class="single-pricing-a">
+                                                <a data-toggle="modal" data-target="#agric"  (click)="agric('agric')" class="mt-3 btn d-block text-center btn-primary color_white" >Update </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+  </section>
+
+
+    <div id="agric" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title orange_color">Agriculture Stat</h5>
+                <a type="a orange_color" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <div class="modal-body">
+                <br>
+                <!-- <form  [formGroup]="walletForm" return false class="checkout-form row">
+                    <div class="form-group col-12">
+                        <label for="">Agriculture</label>
+                        <input formControlName="wallet_token"  class="form-control" type="text" placeholder="Wallet Token">	
+                    </div>	
+                </form> -->
+            </div>
+            <div class="modal-footer">
+                <!-- <a (click)="submit(walletForm.value)"   class="btn btn-primary color_white">Save changes</a>
+                <a  class="btn btn-secondary color_white" data-dismiss="modal">Close</a> -->
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="crypto" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title orange_color">Update Crypto Stat</h5>
+                <a type="a orange_color" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <div class="modal-body">
+                <br>
+                <!-- <form  [formGroup]="walletForm" return false class="checkout-form row">
+                    <div class="form-group col-12">
+                        <label for="">Wallet Token</label>
+                        <input formControlName="wallet_token"  class="form-control" type="text" placeholder="Wallet Token">	
+                    </div>	
+                </form> -->
+            </div>
+            <div class="modal-footer">
+                <!-- <a (click)="submit(walletForm.value)"   class="btn btn-primary color_white">Save changes</a>
+                <a  class="btn btn-secondary color_white" data-dismiss="modal">Close</a> -->
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="real" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title orange_color">Real Estate stat </h5>
+                <a type="a orange_color" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <div class="modal-body">
+                <br>
+                <!-- <form  [formGroup]="walletForm" return false class="checkout-form row">
+                    <div class="form-group col-12">
+                        <label for="">Wallet Token</label>
+                        <input formControlName="wallet_token"  class="form-control" type="text" placeholder="Wallet Token">	
+                    </div>	
+                </form> -->
+            </div>
+            <div class="modal-footer">
+                <!-- <a (click)="submit(walletForm.value)"   class="btn btn-primary color_white">Save changes</a>
+                <a  class="btn btn-secondary color_white" data-dismiss="modal">Close</a> -->
+            </div>
+            </div>
+        </div>
+    </div>

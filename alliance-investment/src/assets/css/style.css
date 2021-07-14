@@ -2919,6 +2919,7 @@ ul.quick-link-list li a:hover:after {
 	background: #333;
 	padding: 22px 0 20px;
 	border-top: 8px solid #444;
+	color: #fff !important;
 }
 
 .footer-menu ul li a {
@@ -3619,8 +3620,8 @@ h3.widget-title:before {
 }
 
 .btn-contact-bg {
-	background: #333;
-	color: #fff;
+	background: #e63205 !important;
+	color: #fff !important;
 	border-radius: 0;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -3633,8 +3634,8 @@ h3.widget-title:before {
 
 .btn-contact-bg:hover,
 .btn-contact-bg:focus {
-	box-shadow: none;
-	background: #e63205;
+	box-shadow: none !important;
+	background: #e63205 !important;
 }
 
 #gmap_canvas,
@@ -3685,10 +3686,10 @@ h3.widget-title:before {
 */
 
 .error-page-wrap h3 {
-	font-size: 150px;
-	margin: -30px 0 0;
-	letter-spacing: 20px;
-	color: #e63205;
+	font-size: 150px !important;
+	margin: -30px 0 0 !important;
+	letter-spacing: 20px !important;
+	color: #e63205 !important;
 }
 
 .error-page-wrap h4 {

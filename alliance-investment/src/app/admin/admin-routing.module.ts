@@ -6,6 +6,8 @@ import { DepositComponent } from './deposit/deposit.component';
 import { InvestmentComponent } from './investment/investment.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SettingsComponent } from './settings/settings.component';
+import { StatSettingsComponent } from './settings/stat-settings/stat-settings.component';
+import { AddUserComponent } from './users/add-user/add-user.component';
 import { UsersComponent } from './users/users.component';
 import { WithdrawsComponent } from './withdraws/withdraws.component';
 
@@ -27,6 +29,10 @@ const routes: Routes = [
         component: UsersComponent
       },
       {
+        path: 'new_user',
+        component: AddUserComponent
+      },
+      {
         path: 'withdraws',
         component: WithdrawsComponent
       },
@@ -37,6 +43,10 @@ const routes: Routes = [
       {
         path: 'settings',
         component: SettingsComponent
+      },
+      {
+        path: 'stat',
+        component: StatSettingsComponent
       },
       {
         path: 'invest',

@@ -81,7 +81,6 @@ export class AuthService {
     // Function to get User Payload
     getUserPayLoad(){
       let secret = this.getToken();
-
       if (secret) {
         let userPayLoad = atob(secret.split('.')[1]);
         return JSON.parse(userPayLoad)
@@ -92,7 +91,6 @@ export class AuthService {
     // Function to checek if User is logged In
     isLoggedIn() {
       let userPayLoad = this.getUserPayLoad();
-
       if (userPayLoad) {
         return userPayLoad;
         // .exp > Date.now() / 1000

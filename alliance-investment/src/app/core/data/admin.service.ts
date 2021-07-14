@@ -112,6 +112,15 @@ export class AdminService {
         })
       });
     }
+    delete_deposit(id: any){
+      return this._http.get(`${url}/admin/delete_deposit/${id}`,  {
+        observe: 'body',    
+        headers:  new HttpHeaders({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + this._authService.getToken()
+        })
+      });
+    }
     approve_withdraw(id: any){
       return this._http.get(`${url}/admin/approve_withdraw/${id}`,  {
         observe: 'body',    

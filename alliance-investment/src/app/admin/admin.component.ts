@@ -45,8 +45,18 @@ export class AdminComponent implements OnInit {
         window.location.reload();
      })  
     }
+    adduser() {
+      this._router.navigate(['/panel/admin/new_user']).then(() => {
+        window.location.reload();
+     }) 
+    }
     settings() {
       this._router.navigate(['/panel/admin/settings']).then(() => {
+        window.location.reload();
+     })  
+    }
+    stat_settings() {
+      this._router.navigate(['/panel/admin/stat']).then(() => {
         window.location.reload();
      })  
     }
