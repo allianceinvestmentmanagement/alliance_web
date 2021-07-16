@@ -42,6 +42,16 @@ export class UserService {
       })
     });
   }
+  // Function to capture notifications
+  getNotifications() {
+    return this._http.get(`${url}/user/notifications`,  {
+      observe: 'body',    
+      headers:  new HttpHeaders({
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + this._authService.getToken()
+      })
+    });
+  }
   // Request For withdraw
   requestWithdraw(body: any) {
     return this._http.post(`${url}/user/withdraw`, body,  {

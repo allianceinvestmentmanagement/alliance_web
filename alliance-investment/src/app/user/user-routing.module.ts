@@ -4,6 +4,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InvestmentsComponent } from './investments/investments.component';
 import { NewInvestComponent } from './new-invest/new-invest.component';
+import { NotificationComponent } from './notification/notification.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { UserComponent } from './user.component';
@@ -24,6 +25,10 @@ const routes: Routes = [
       {
         path: 'wallet',
         component: WalletComponent
+      },
+      {
+        path: 'notifications',
+        component: NotificationComponent
       },
       {
         path: 'wallets',

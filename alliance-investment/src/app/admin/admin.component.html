@@ -33,23 +33,268 @@
           </li>
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="../../assets/img/face28.jpg" alt="profile"/>
+              <!-- <img src="../../assets/img/face28.jpg" alt="profile"/> -->
+              <span class="icon-menu"></span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="ti-settings text-primary"></i>
-                Settings
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown padding-side" aria-labelledby="profileDropdown">
+              <a class="nav-link" routerLinkActive="active" routerLink="/panel/admin" (click)="dashboard()">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
               </a>
-              <a class="dropdown-item">
-                <i class="ti-power-off text-primary"></i>
-                Logout
+              <a class="nav-link"  (click)="deposit()" aria-expanded="false" >
+                <i class="icon-layout menu-icon"></i>
+                <span class="menu-title">Manage Deposit</span>
+                <i class="menu-arrow"></i>
               </a>
+              <a class="nav-link" (click)="withdraw()" aria-controls="form-elements">
+                <i class="icon-columns menu-icon"></i>
+                <span class="menu-title">Manage Withdraw</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <a class="nav-link" (click)="invest()"  aria-expanded="false" aria-controls="charts">
+                <i class="icon-bar-graph menu-icon"></i>
+                <span class="menu-title">Manage Investment</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <a class="nav-link" (click)="message()" aria-expanded="false" aria-controls="tables">
+                <i class="icon-grid-2 menu-icon"></i>
+                <span class="menu-title">Messages</span>
+              
+              </a>
+              <a class="nav-link" (click)="adduser()">
+                <i class="icon-contract menu-icon"></i>
+                <span class="menu-title"> Add User </span>
+                <i class="menu-arrow"></i>
+              </a>
+              <a class="nav-link" (click)="users()" >
+                <i class="icon-contract menu-icon"></i>
+                <span class="menu-title"> All Users </span>
+                <i class="menu-arrow"></i>
+              </a>
+               <a class="nav-link" (click)="settings()">
+                <i class="icon-head menu-icon"></i>
+                <span class="menu-title">
+                  Wallet Settings
+                </span>
+                <i class="menu-arrow"></i>
+                </a>
+               <a class="nav-link" (click)="stat_settings()"> 
+                <i class="icon-head menu-icon"></i>
+                <span class="menu-title">
+                 Stats Settings 
+                </span>
+                <i class="menu-arrow"></i>
+              </a>
+              <a class="nav-link" (click)="logout()">
+                <i class="icon-paper menu-icon"></i>
+                <span class="menu-title">Logout</span>
+              </a>
+              <ul class="dropdown-item" style="display: none !important;">
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" href="#users" aria-expanded="false" aria-controls="users">
+                 
+                    <span class="menu-title">Manage Users</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="users">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"> </li>
+                      <li class="nav-item"> </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                    <i class="icon-head menu-icon"></i>
+                    <span class="menu-title">System Control</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="collapse" id="auth">
+                    <ul class="nav flex-column sub-menu">
+                    
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                
+                </li>
+              </ul> 
             </div>
           </li>
+          <!-- <li class="nav-item  nav-profile dropdown">
+            <a class="nav-link dropdown-toggle"    data-toggle="dropdown" data-toggle="sidebarDropdown" id="sidebarDropdown">
+              <span class="icon-menu"></span>
+            </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="sidebarDropdown">
+                <a class="dropdown-item">
+                  <i class="ti-settings text-primary"></i>
+                  Dashboard
+                </a>
+                <a class="dropdown-item">
+                  <i class="ti-power-off text-primary"></i>
+                  Logout
+                </a>
+    
+               <ul class="dropdown-item" style="margin-top:5rem">
+                  <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/panel/admin" (click)="dashboard()">
+                      <i class="icon-grid menu-icon"></i>
+                      <span class="menu-title">Dashboard</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"  (click)="deposit()" aria-expanded="false" >
+                      <i class="icon-layout menu-icon"></i>
+                      <span class="menu-title">Manage Deposit</span>
+                      <i class="menu-arrow"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" (click)="withdraw()" aria-controls="form-elements">
+                      <i class="icon-columns menu-icon"></i>
+                      <span class="menu-title">Manage Withdraw</span>
+                      <i class="menu-arrow"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" (click)="invest()"  aria-expanded="false" aria-controls="charts">
+                      <i class="icon-bar-graph menu-icon"></i>
+                      <span class="menu-title">Manage Investment</span>
+                      <i class="menu-arrow"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" (click)="message()" aria-expanded="false" aria-controls="tables">
+                      <i class="icon-grid-2 menu-icon"></i>
+                      <span class="menu-title">Messages</span>
+                      <i class="menu-arrow"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#users" aria-expanded="false" aria-controls="users">
+                      <i class="icon-contract menu-icon"></i>
+                      <span class="menu-title">Manage Users</span>
+                      <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="users">
+                      <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"> <a class="nav-link" (click)="adduser()">Add User</a></li>
+                        <li class="nav-item"> <a class="nav-link" (click)="users()" >All Users</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                      <i class="icon-head menu-icon"></i>
+                      <span class="menu-title">System Control</span>
+                      <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="auth">
+                      <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"> <a class="nav-link" (click)="settings()"> Wallet Settings </a></li>
+                        <li class="nav-item"> <a class="nav-link" (click)="stat_settings()"> Stats Settings </a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" (click)="logout()">
+                      <i class="icon-paper menu-icon"></i>
+                      <span class="menu-title">Logout</span>
+                    </a>
+                  </li>
+                </ul> 
+    
+    
+              </div>
+           
+
+
+          </li> -->
         </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+        <!-- <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="sidebarDropdown">
           <span class="icon-menu"></span>
-        </button>
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="sidebarDropdown">
+             <a class="dropdown-item">
+              <i class="ti-settings text-primary"></i>
+              Settings
+            </a>
+            <a class="dropdown-item">
+              <i class="ti-power-off text-primary"></i>
+              Logout
+            </a> 
+
+            <ul class="nav" style="margin-top:5rem">
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="/panel/admin" (click)="dashboard()">
+                  <i class="icon-grid menu-icon"></i>
+                  <span class="menu-title">Dashboard</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  (click)="deposit()" aria-expanded="false" >
+                  <i class="icon-layout menu-icon"></i>
+                  <span class="menu-title">Manage Deposit</span>
+                  <i class="menu-arrow"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="withdraw()" aria-controls="form-elements">
+                  <i class="icon-columns menu-icon"></i>
+                  <span class="menu-title">Manage Withdraw</span>
+                  <i class="menu-arrow"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="invest()"  aria-expanded="false" aria-controls="charts">
+                  <i class="icon-bar-graph menu-icon"></i>
+                  <span class="menu-title">Manage Investment</span>
+                  <i class="menu-arrow"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="message()" aria-expanded="false" aria-controls="tables">
+                  <i class="icon-grid-2 menu-icon"></i>
+                  <span class="menu-title">Messages</span>
+                  <i class="menu-arrow"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#users" aria-expanded="false" aria-controls="users">
+                  <i class="icon-contract menu-icon"></i>
+                  <span class="menu-title">Manage Users</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="users">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" (click)="adduser()">Add User</a></li>
+                    <li class="nav-item"> <a class="nav-link" (click)="users()" >All Users</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                  <i class="icon-head menu-icon"></i>
+                  <span class="menu-title">System Control</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="auth">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" (click)="settings()"> Wallet Settings </a></li>
+                    <li class="nav-item"> <a class="nav-link" (click)="stat_settings()"> Stats Settings </a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="logout()">
+                  <i class="icon-paper menu-icon"></i>
+                  <span class="menu-title">Logout</span>
+                </a>
+              </li>
+            </ul>
+
+
+          </div>
+        </button> -->
       </div>
     </nav>
   <!-- New Navbar Ends -->

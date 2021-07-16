@@ -113,7 +113,7 @@ export class AdminService {
       });
     }
     delete_deposit(id: any){
-      return this._http.get(`${url}/admin/delete_deposit/${id}`,  {
+      return this._http.delete(`${url}/admin/delete_deposit/${id}`,  {
         observe: 'body',    
         headers:  new HttpHeaders({
           'Accept': 'application/json',

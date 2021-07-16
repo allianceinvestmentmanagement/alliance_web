@@ -16,10 +16,11 @@ import { NewInvestComponent } from './new-invest/new-invest.component';
 import { InvestmentsComponent } from './investments/investments.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { NotificationComponent } from './notification/notification.component';
 
 
 @NgModule({
-  declarations: [UserComponent, DashboardComponent, WalletComponent, WalletsComponent, WithdrawComponent, WithdrawsComponent, TransactionsComponent, NewInvestComponent, InvestmentsComponent, ProfileComponent, ChangePasswordComponent],
+  declarations: [UserComponent, DashboardComponent, WalletComponent, WalletsComponent, WithdrawComponent, WithdrawsComponent, TransactionsComponent, NewInvestComponent, InvestmentsComponent, ProfileComponent, ChangePasswordComponent, NotificationComponent],
   imports: [
     CommonModule,
     UserRoutingModule,
