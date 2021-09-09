@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\USER\Documents\Client Projects\alliance-server\alliance-investment\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\Users\Ajayi Oluwafemi\OneDrive\Desktop\alliance_web\alliance-investment\src\polyfills.ts */"hN/g");
 
 
 /***/ }),
