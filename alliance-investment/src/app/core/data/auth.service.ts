@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 const url = "https://allianceapi.herokuapp.com/api/v1";  
+// const url = "http://localhost:3000/api/v1";
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +32,13 @@ export class AuthService {
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
   }
+    // Function To login
+    forget(body: any) {
+      return this._http.post(`${url}/forget`, body,  {
+        observe: 'body',
+        headers: new HttpHeaders().append('Content-Type', 'application/json')
+      });
+    }
     // Function to get User Details
     getUserInfo(){
       return this._http.get(`${url}/userInfo`,  {

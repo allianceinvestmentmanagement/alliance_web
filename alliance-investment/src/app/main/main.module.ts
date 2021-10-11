@@ -19,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterLinkComponent } from './register-link/register-link.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { RegisterLinkComponent } from './register-link/register-link.component';
     InvestComponent,
     LoginComponent,
     RegisterComponent,
-    RegisterLinkComponent
+    RegisterLinkComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     CommonModule,

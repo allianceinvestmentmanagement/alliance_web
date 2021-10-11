@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FaqsComponent } from './faqs/faqs.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { IndexComponent } from './index/index.component';
 import { InvestComponent } from './invest/invest.component';
 import { LoginComponent } from './login/login.component';
@@ -72,6 +73,10 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent
+      },
+      {
+        path: 'forget',
+        component: ForgetPasswordComponent
       },
       {
         path: 'register',
