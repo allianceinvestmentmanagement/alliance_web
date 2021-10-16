@@ -22,6 +22,25 @@ class AuthService {
     constructor(_http) {
         this._http = _http;
     }
+    // Login as admin into user account
+    adminLoginAs(payload) {
+        return this._http.post(`${url}/admin/adminloinasuser`, payload, {
+            observe: 'body',
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + this.getToken()
+            })
+        });
+    }
+    LoginAs(payload) {
+        return this._http.post(`${url}/admin/login`, payload, {
+            observe: 'body',
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + this.getToken()
+            })
+        });
+    }
     // Function To login
     signup(body) {
         return this._http.post(`${url}/register`, body, {
