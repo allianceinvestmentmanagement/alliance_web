@@ -42,6 +42,7 @@
                         <td style="display: flex;">
                             <a *ngIf="item?.role != 'admin'" (click)="delete(item?._id)" class="btn btn-danger white" style="cursor: pointer;">Delete User</a>
                             <a data-toggle="modal" data-target="#downlineModal" *ngIf="item?.role != 'admin'" (click)="view(item?.username)" class="btn btn-success white" style="cursor: pointer;">View-Downline</a>
+                            <a data-toggle="modal" data-target="#viewModal" *ngIf="item?.role != 'admin'" (click)="viewUser(item)" class="btn btn-warning white" style="cursor: pointer;">View User Details</a>
                         </td>
                         </tr>
                     </tbody>
@@ -59,9 +60,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">LIst of Selected User Downline</h5>
-          <button  class="close" data-dismiss="modal" aria-label="Close">
+          <a  class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
-          </button>
+          </a>
         </div>
         <div class="modal-body">
                 <div class="row">
@@ -92,10 +93,36 @@
                 </div>
         </div>
         <div class="modal-footer bg-light pull-left">
-          <button  class="btn btn-warning pull-left cancel text-green" data-dismiss="modal">Cancel</button>
+          <a  class="btn btn-warning pull-left cancel text-green" data-dismiss="modal">Cancel</a>
         </div>
       </div>
     </div>
-  </div>
+</div>
 <!-- Modal to view downline users ends -->
+<!-- Modal to view user details start -->
+<div class="modal fade" id="viewModal" >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">View User Details</h5>
+          <a  class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+        </div>
+        <div class="modal-body">
+           <h5 class="mb-1">Name: <strong> {{selectedUserDetails?.name}}</strong></h5>
+          <h5 class="mb-1">Email: <strong>{{selectedUserDetails?.email}}</strong></h5>
+          <h5 class="mb-1">Phone Number: <strong>{{selectedUserDetails?.phone_number}}</strong></h5>
+          <h5 class="mb-1">Username: <strong>{{selectedUserDetails?.username}}</strong></h5>
+          <h5 class="mb-1">User Role: <strong>{{selectedUserDetails?.role}}</strong></h5>
+          <h5 class="mb-1">User Password: <strong>{{selectedUserDetails?.password}}</strong></h5>
+        </div>
+        <div class="modal-footer bg-light pull-left">
+          <a  class="btn btn-warning pull-left cancel text-green" data-dismiss="modal">Cancel</a>
+          <a  class="btn btn-success pull-left  text-green" data-dismiss="modal" (click)="LoginToUserAccount()">Login to User Account</a>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Modal to view user details ends -->
 <notifier-container></notifier-container>

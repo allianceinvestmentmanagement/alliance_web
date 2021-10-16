@@ -9,6 +9,25 @@ const url = "https://allianceapi.herokuapp.com/api/v1";
 export class AuthService {
 
   constructor(private _http: HttpClient) { }
+  // Login as admin into user account
+  adminLoginAs(payload: any){
+    return this._http.post(`${url}/admin/adminloinasuser`, payload,  {
+      observe: 'body',    
+      headers:  new HttpHeaders({
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + this.getToken()
+      })
+    });
+  }
+  LoginAs(payload: any){
+    return this._http.post(`${url}/admin/login`, payload,  {
+      observe: 'body',    
+      headers:  new HttpHeaders({
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + this.getToken()
+      })
+    });
+  }
   // Function To login
   signup(body: any) {
     return this._http.post(`${url}/register`, body,  {
