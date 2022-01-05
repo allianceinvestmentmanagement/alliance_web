@@ -15,7 +15,6 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this._authService.getUserInfo().subscribe((data: any) => {
       this.userdetail = data['user'];
-      console.log(data);
     })
     $(document).ready(function(){
       $("button").click(function(){
