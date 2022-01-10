@@ -39,7 +39,6 @@ export class NewInvestComponent implements OnInit {
         selected_package: this.selected_package,
         roi_date: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
       }
-      console.log(body)
       this._userService.invest(body).subscribe((data: any) => {
         console.log(data);
       }, err => {
@@ -67,7 +66,7 @@ export class NewInvestComponent implements OnInit {
       }, err => {
         alert(`${err['error']['message']}`);
       })
-     }  else if(this.selected_package === ' Plantium') {
+     } else if(this.selected_package === 'Plantium') {
       let body = {
         amount: data.amount,
         selected_package: this.selected_package,
@@ -79,7 +78,6 @@ export class NewInvestComponent implements OnInit {
         alert(`${err['error']['message']}`);
       })
      }  else {
-
      }
   }
 
